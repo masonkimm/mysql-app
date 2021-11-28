@@ -1,0 +1,9 @@
+.sideBar {
+  flex: 2;
+  border: 1px solid black;
+}
+
+.sideBar__items {
+  display: flex;
+  flex-direction: column;
+}

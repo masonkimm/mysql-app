@@ -13,7 +13,26 @@ html {
   flex-direction: column;
   justify-content: center;
 }
+.app__container {
+  height: 800px;
+  width: 100%;
+  display: flex;
+  border: 1px solid red;
+}
+/* .container__leftSide {
+  flex: 2;
+  border: 1px solid black;
+} */
+.container__rightSide {
+  flex: 9;
+  border: 1px solid purple;
+}
 
+.link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
 /* mobile responsive */
 @media (max-width: 600px) {
   .app {

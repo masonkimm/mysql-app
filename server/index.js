@@ -37,13 +37,24 @@ app.post('/create', (req, res) => {
   );
 });
 
-app.get('/main', (req, res) => {
+app.get('/api/main', (req, res) => {
   const query = 'SELECT * FROM snippets';
   db.query('SELECT * FROM snippets', (err, data) => {
     if (err) {
       console.log(err);
     } else {
-      res.send({ snipetts: data });
+      res.send(data);
+    }
+  });
+});
+
+app.get('/api/snippet/:id', (req, res) => {
+  const query = `SELECT * FROM snippets WHERE id=${req.params.id}`;
+  db.query(query, (err, data) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(data);
     }
   });
 });
