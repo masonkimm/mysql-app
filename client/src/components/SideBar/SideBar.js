@@ -6,15 +6,6 @@ import Snippet from '../Snippet/Snippet';
 const SideBar = () => {
   const [snippets, setSnippets] = useState([]);
 
-  // const getSnippets = async () => {
-  //   await axios.get('/main').then((response) => {
-  //     const res = response.data;
-  //     console.log(res);
-  //     setSnippets(response.data);
-  //   });
-  // };
-  // getSnippets();
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -28,9 +19,9 @@ const SideBar = () => {
     fetchData();
   }, []);
 
-  // console.log(snippets);
   return (
     <div className='sideBar'>
+      <h4 className='sideBar__title'>Saved List</h4>
       <div className='side__items'>
         {snippets &&
           snippets.map((snippet) => (

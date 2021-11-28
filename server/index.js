@@ -29,7 +29,7 @@ app.post('/api/snippet/create', (req, res) => {
     },
     (err, data) => {
       if (err) throw err;
-      console.log(err);
+      // console.log(err);
       res.send(data);
       // res.json(data)
       // res.render('index', { snippets: data });
@@ -41,7 +41,7 @@ app.get('/api/main', (req, res) => {
   const query = 'SELECT * FROM snippets';
   db.query('SELECT * FROM snippets', (err, data) => {
     if (err) {
-      console.log(err);
+      // console.log(err);
     } else {
       res.send(data);
     }
@@ -52,7 +52,7 @@ app.get('/api/snippet/:id', (req, res) => {
   const query = `SELECT * FROM snippets WHERE id=${req.params.id}`;
   db.query(query, (err, data) => {
     if (err) {
-      console.log(err);
+      // console.log(err);
     } else {
       res.send(data);
     }

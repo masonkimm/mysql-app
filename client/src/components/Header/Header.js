@@ -9,11 +9,11 @@ const Header = () => {
         <h1 className='title__big'>Snippet App</h1>
         <p className='title__small'>MySQL - Express - React - Node</p>
       </div>
-      <div className='header__newSnippetBtn'>
+      {/* <div className='header__newSnippetBtn'>
         <Link to={'/snippet/create'}>
           <span> Creat New</span>
         </Link>
-      </div>
+      </div> */}
       <div className='header__img'>
         <img
           src='https://images.unsplash.com/photo-1602659408748-ecdc55ed7a50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'

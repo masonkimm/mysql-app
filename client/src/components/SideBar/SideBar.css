@@ -1,8 +1,18 @@
 .sideBar {
   flex: 2;
   border: 1px solid black;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide scroll bar for chrome, safari, and opera */
+.sideBar::-webkit-scrollbar {
+  display: none;
 }
 
+.sideBar__title {
+  text-align: center;
+}
 .sideBar__items {
   display: flex;
   flex-direction: column;

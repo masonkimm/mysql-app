@@ -14,17 +14,18 @@ html {
   justify-content: center;
 }
 .app__container {
-  height: 800px;
+  max-height: 60vh;
+  height: auto;
   width: 100%;
   display: flex;
-  border: 1px solid red;
+  padding: 2rem;
+  /* background-color: lightblue; */
+  /* border: 1px solid red; */
 }
-/* .container__leftSide {
-  flex: 2;
-  border: 1px solid black;
-} */
+
 .container__rightSide {
   flex: 9;
+  margin: 0 1rem;
   border: 1px solid purple;
 }
 

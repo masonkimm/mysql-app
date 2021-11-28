@@ -7,6 +7,7 @@ import SideBar from './components/SideBar/SideBar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ShowSnippet from './components/ShowSnippet/ShowSnippet';
 import CreateSnippet from './components/CreateSnippet/CreateSnippet';
+import About from './components/About/About';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         <NavBar />
         <Header />
 
+        {/* <Routes>
+          <Route path='/about' element={<About />}></Route>
+        </Routes> */}
         <div className='app__container'>
           <SideBar />
           <div className='container__rightSide'>

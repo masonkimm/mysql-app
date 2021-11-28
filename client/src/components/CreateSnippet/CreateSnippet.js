@@ -39,12 +39,33 @@ const CreateSnippet = () => {
           </div>
           <div className='form-group'>
             <label htmlFor=''>Language</label>
-            <input
+            <select
+              class='form-control'
+              name=''
+              id='snippetLanguage'
+              onChange={(e) => setLanguage(e.target.value)}>
+              <option value=''>Select One</option>
+              <option value='html5'>HTML 5</option>
+              <option value='javascript'>JavaScript</option>
+              <option value='css3'>CSS 3</option>
+              <option value='c'>C</option>
+              <option value='csharp'>C#</option>
+              <option value='cplusplus'>C++</option>
+              <option value='python'>Python</option>
+              <option value='java'>Java</option>
+              <option value='go'>Go</option>
+              <option value='r'>R</option>
+              <option value='swift'>Swift</option>
+              <option value='php'>PHP</option>
+              <option value='ruby'>Ruby</option>
+            </select>
+
+            {/* <input
               type='text'
               className='form-control'
               placeholder='language'
               onChange={(e) => setLanguage(e.target.value)}
-            />
+            /> */}
           </div>
           <div className='form-group'>
             <label htmlFor=''>Description</label>

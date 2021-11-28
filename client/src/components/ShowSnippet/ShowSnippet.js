@@ -31,6 +31,8 @@ const ShowSnippet = () => {
           <div className='showSnippet__item' key={snippet.id}>
             <p>snippet id:{snippet.id}</p>
             <p>title: {snippet.title}</p>
+            <p>language: {snippet.language}</p>
+
             <p>description: {snippet.description}</p>
             <p>snippet: {snippet.snippet}</p>
           </div>
