@@ -6,7 +6,7 @@ import './ShowSnippet.css';
 const ShowSnippet = () => {
   const location = useLocation();
   const path = location.pathname.split('/')[2];
-  console.log(path);
+  // console.log(path);
 
   const [snippet, setSnippet] = useState([]);
 
@@ -14,7 +14,7 @@ const ShowSnippet = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(`/snippet/${path}`);
-        console.log(res.data);
+        // console.log(res.data);
         await setSnippet(res.data);
       } catch (err) {
         console.log(err);
@@ -22,7 +22,7 @@ const ShowSnippet = () => {
     };
     fetchData();
   }, [path]);
-  console.log(snippet);
+  // console.log(snippet);
 
   return (
     <div className='showSnippet'>

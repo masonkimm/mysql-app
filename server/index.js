@@ -16,7 +16,7 @@ if (db) {
   console.log('connected as to db');
 }
 
-app.post('/create', (req, res) => {
+app.post('/api/snippet/create', (req, res) => {
   db.query(
     {
       sql: 'INSERT INTO snippets (title, language, description, snippet) values (?, ?, ?, ?)',
@@ -30,7 +30,7 @@ app.post('/create', (req, res) => {
     (err, data) => {
       if (err) throw err;
       console.log(err);
-      res.send('Values inserted into DB');
+      res.send(data);
       // res.json(data)
       // res.render('index', { snippets: data });
     }

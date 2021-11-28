@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -7,6 +8,11 @@ const Header = () => {
       <div className='header__title'>
         <h1 className='title__big'>Snippet App</h1>
         <p className='title__small'>MySQL - Express - React - Node</p>
+      </div>
+      <div className='header__newSnippetBtn'>
+        <Link to={'/snippet/create'}>
+          <span> Creat New</span>
+        </Link>
       </div>
       <div className='header__img'>
         <img

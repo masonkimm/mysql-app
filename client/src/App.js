@@ -6,6 +6,7 @@ import SideBar from './components/SideBar/SideBar';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ShowSnippet from './components/ShowSnippet/ShowSnippet';
+import CreateSnippet from './components/CreateSnippet/CreateSnippet';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <div className='container__rightSide'>
             <Routes>
               <Route path='/snippet/:id' element={<ShowSnippet />} />
+              <Route path='/snippet/create' element={<CreateSnippet />} />
             </Routes>
           </div>
         </div>

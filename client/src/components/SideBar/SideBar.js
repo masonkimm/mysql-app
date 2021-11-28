@@ -28,7 +28,7 @@ const SideBar = () => {
     fetchData();
   }, []);
 
-  console.log(snippets);
+  // console.log(snippets);
   return (
     <div className='sideBar'>
       <div className='side__items'>
