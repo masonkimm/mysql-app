@@ -6,7 +6,7 @@ const Snippet = ({ snippet }) => {
   return (
     <div className='snippet'>
       <span key={snippet.id} className='snippet__item btn'>
-        <i class={`devicon-${snippet.language}-plain  colored`} />{' '}
+        <i className={`devicon-${snippet.language}-plain  colored`} />{' '}
         <Link to={`/snippet/${snippet.id}`} className='link'>
           {snippet.title}
         </Link>

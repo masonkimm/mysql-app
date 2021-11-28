@@ -26,7 +26,7 @@ const CreateSnippet = () => {
   };
 
   return (
-    <div className='createSnippet'>
+    <div className='createSnippet' id='createNew'>
       <div className='container createSnippet__container'>
         <h1 className='container__title'>Create New Snippet</h1>
         <form action='' onSubmit={handleSubmit}>
@@ -42,7 +42,7 @@ const CreateSnippet = () => {
           <div className='form-group'>
             <label htmlFor=''>Language</label>
             <select
-              class='form-control'
+              className='form-control'
               name=''
               id='snippetLanguage'
               onChange={(e) => setLanguage(e.target.value)}>

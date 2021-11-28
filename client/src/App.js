@@ -7,7 +7,9 @@ import SideBar from './components/SideBar/SideBar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ShowSnippet from './components/ShowSnippet/ShowSnippet';
 import CreateSnippet from './components/CreateSnippet/CreateSnippet';
-import About from './components/About/About';
+// import About from './components/About/About';
+import LandingPage from './components/LandingPage/LandingPage';
+import UpdateSnippet from './components/UpdateSnippet/UpdateSnippet';
 
 function App() {
   return (
@@ -15,17 +17,20 @@ function App() {
       <div className='app'>
         <img src={logo} className='app-logo' alt='logo' />
         <NavBar />
+        {/* <Routes>
+          <Route path='/' element={<LandingPage />} />
+        </Routes> */}
+        {/* <LandingPage /> */}
         <Header />
 
-        {/* <Routes>
-          <Route path='/about' element={<About />}></Route>
-        </Routes> */}
         <div className='app__container'>
           <SideBar />
           <div className='container__rightSide'>
             <Routes>
+              <Route path='/' element={<LandingPage />} />
               <Route path='/snippet/:id' element={<ShowSnippet />} />
               <Route path='/snippet/create' element={<CreateSnippet />} />
+              <Route path='/snippet/update' element={<UpdateSnippet />} />
             </Routes>
           </div>
         </div>

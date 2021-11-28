@@ -31,13 +31,15 @@ const NavBar = () => {
             </li>
             <li className='nav-item'>
               <Link to={'/snippet/create'}>
-                <span className='nav-link'>Create New</span>
+                <span className='nav-link' href='#createNew'>
+                  Create New
+                </span>
               </Link>
             </li>
 
             <li className='nav-item'>
               <Link to={'/about'}>
-                <a className='nav-link '>About</a>
+                <span className='nav-link '>About</span>
               </Link>
             </li>
           </ul>
