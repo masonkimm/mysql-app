@@ -43,13 +43,6 @@ const ShowSnippet = () => {
   }, [path]);
 
   const handleUpdate = async () => {
-    // console.log(
-    //   updatedTitle,
-    //   updatedDescription,
-    //   updatedLanguage,
-    //   updatedSnippet
-    // );
-
     try {
       await axios.put(`/snippet/update`, {
         id: path,
@@ -59,6 +52,13 @@ const ShowSnippet = () => {
         snippet: updatedSnippet || snippetBody,
       });
       window.location.replace(`/snippet/${path}`);
+    } catch (err) {}
+  };
+
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/delete/${path}`);
+      window.location.replace('/');
     } catch (err) {}
   };
 
@@ -89,7 +89,9 @@ const ShowSnippet = () => {
                 <i
                   className='far fa-edit editBtn'
                   onClick={() => setUpdateMode(true)}></i>
-                <i className='fas fa-trash-alt deleteBtn'></i>
+                <i
+                  className='fas fa-trash-alt deleteBtn'
+                  onClick={handleDelete}></i>
               </div>
             </div>
             <div className='item__bottomRow'>

@@ -62,8 +62,7 @@ app.get('/api/snippet/:id', (req, res) => {
   });
 });
 
-// route to update a specific snipet
-
+// route to update a snippet
 app.put('/api/snippet/update', (req, res) => {
   const query =
     'UPDATE snippets SET title = ?, language =?, description=?, snippet =? WHERE ?';
@@ -85,6 +84,19 @@ app.put('/api/snippet/update', (req, res) => {
       }
     }
   );
+});
+
+// route to delete a snipet
+app.delete('/api/delete/:id', (req, res) => {
+  const query = `DELETE FROM snippets WHERE id=${req.params.id}`;
+  db.query(query, (err, data) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(data);
+      // res.send('deleted');
+    }
+  });
 });
 
 app.listen(PORT, () => {

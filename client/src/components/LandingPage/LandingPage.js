@@ -1,6 +1,6 @@
 import React from 'react';
 import './LandingPage.css';
-import video from './video.mp4';
+import video from './video2.mp4';
 
 const LandingPage = () => {
   return (
