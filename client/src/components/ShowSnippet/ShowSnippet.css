@@ -1,0 +1,57 @@
+.showSnippet {
+  padding: 1rem;
+  height: 100%;
+  border: 1px solid red;
+}
+
+.showSnippet__item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid red;
+}
+.showSnippet h1 {
+  padding: 10px;
+}
+.item__topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+}
+.item__topRow .devicon {
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.topRow__rightSide .editBtn {
+  color: green;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.topRow__rightSide .deleteBtn {
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+}
+.item__bottomRow {
+  height: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.item__left {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  flex: 3;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.item__right {
+  border: 1px solid blue;
+
+  padding: 10px;
+  flex: 9;
+}

@@ -1,5 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './CreateSnippet.css';
 
 const CreateSnippet = () => {
@@ -27,13 +28,14 @@ const CreateSnippet = () => {
   return (
     <div className='createSnippet'>
       <div className='container createSnippet__container'>
+        <h1 className='container__title'>Create New Snippet</h1>
         <form action='' onSubmit={handleSubmit}>
           <div className='form-group'>
             <label htmlFor=''>Title</label>
             <input
               type='text'
               className='form-control'
-              placeholder='title'
+              placeholder='Enter a title'
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
@@ -72,7 +74,7 @@ const CreateSnippet = () => {
             <input
               type='text'
               className='form-control'
-              placeholder='description'
+              placeholder='Enter description'
               onChange={(e) => setDescription(e.target.value)}
             />
           </div>
@@ -84,12 +86,19 @@ const CreateSnippet = () => {
               id=''
               cols='30'
               rows='10'
-              placeholder='snippet here'
+              placeholder='Enter snippet'
               className='form-control'
               onChange={(e) => setSnippet(e.target.value)}></textarea>
           </div>
-          <button type='submit' className='btn btn-primary'>
+          <button
+            type='submit'
+            className='btn btn-primary createSnippet__submitBtn'>
             submit
+          </button>
+          <button className='btn btn-danger createSnippet__submitBtn'>
+            <Link to={'/'} className='link'>
+              Cancel
+            </Link>
           </button>
         </form>
       </div>

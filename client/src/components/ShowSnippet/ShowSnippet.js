@@ -29,12 +29,29 @@ const ShowSnippet = () => {
       {snippet &&
         snippet.map((snippet) => (
           <div className='showSnippet__item' key={snippet.id}>
-            <p>snippet id:{snippet.id}</p>
-            <p>title: {snippet.title}</p>
-            <p>language: {snippet.language}</p>
-
-            <p>description: {snippet.description}</p>
-            <p>snippet: {snippet.snippet}</p>
+            <div className='item__topRow'>
+              <h1>
+                {' '}
+                <i
+                  class={`devicon-${snippet.language}-plain  colored devicon`}
+                />
+                {snippet.title}
+              </h1>
+              <div className='topRow__rightSide'>
+                <i class='far fa-edit editBtn'></i>
+                <i class='fas fa-trash-alt deleteBtn'></i>
+              </div>
+            </div>
+            <div className='item__bottomRow'>
+              <div className='item__left'>
+                <p>snippet id:{snippet.id}</p>
+                <p>language: {snippet.language}</p>
+                <p>description: {snippet.description}</p>
+              </div>
+              <div className='item__right'>
+                <p>snippet: {snippet.snippet}</p>
+              </div>
+            </div>
           </div>
         ))}
     </div>
