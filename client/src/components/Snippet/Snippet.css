@@ -9,6 +9,10 @@
   width: 18em;
   height: 350px;
   border-radius: 10px;
+  box-shadow: 2px 2px lightgray;
+  /* background: #89d2dc; */
+  /* background: #c0e7ec;
+  background: #babadc; */
 }
 .snippet .card i {
   font-size: 100px;

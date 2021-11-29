@@ -5,7 +5,7 @@ import './NavBar.css';
 
 const NavBar = () => {
   return (
-    <nav className='navbar navbar-expand-lg navbar-dark  sticky-top p-5'>
+    <nav className='navbar navbar-expand-lg navbar-dark  sticky-top p-5 ml-5 mr-5'>
       <Link to={'/'}>
         <h2 className='navbar-brand'>Snippet App</h2>
       </Link>

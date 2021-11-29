@@ -20,6 +20,13 @@ const SideBar = () => {
     fetchData();
   }, []);
 
+  const languages = snippets.map((snippet) => snippet.language);
+  console.log(languages);
+  const filteredLang = languages.filter(
+    (item, index) => languages.indexOf(item) === index
+  );
+  console.log(filteredLang);
+
   return (
     <div className='sideBar'>
       <div className='sideBar__top'>
@@ -35,11 +42,17 @@ const SideBar = () => {
       </div>
       <div className='sideBar__bottom'>
         <h4 className='sideBar__title'>Languages</h4>
-        <div className='side__items'>
-          {/* {snippets &&
-            snippets.map((snippet) => (
-              <Snippet snippet={snippet} key={snippet.id} />
-            ))} */}
+        <div className='sideBar__items'>
+          {filteredLang &&
+            filteredLang.map((language) => (
+              <Link
+                to={`/?language=${language}`}
+                key={language}
+                className='link'>
+                <button className='btn'>{language}</button>
+              </Link>
+              // <Snippet snippet={snippet} key={snippet.id} />
+            ))}
         </div>
       </div>
     </div>

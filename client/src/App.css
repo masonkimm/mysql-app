@@ -19,12 +19,14 @@ html::-webkit-scrollbar {
 }
 .app__container {
   position: absolute;
-  height: 60vh;
+  min-height: 60vh;
   top: 40%;
   width: 100%;
   display: flex;
   padding: 2rem;
-  /* background: rgb(82, 121, 158); */
+  /* background: #c0e7ec; */
+  background-image: url('https://images.unsplash.com/photo-1471671097732-93d190725447?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=926&q=80');
+  background-size: cover;
 }
 
 .container__rightSide {

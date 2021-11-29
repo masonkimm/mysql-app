@@ -40,15 +40,56 @@ app.post('/api/snippet/create', (req, res) => {
 
 // route to get all snippets
 app.get('/api/main', (req, res) => {
-  const query = 'SELECT * FROM snippets';
-  db.query('SELECT * FROM snippets', (err, data) => {
-    if (err) {
-      // console.log(err);
-    } else {
-      res.send(data);
-    }
-  });
+  // to get snippets by language
+  const language = req.query.language;
+  if (language) {
+    const query = `SELECT * FROM snippets WHERE language = "${language}"`;
+    db.query(query, (err, data) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(data);
+      }
+    });
+  } else {
+    // to get all snippets
+    const query = 'SELECT * FROM snippets';
+    db.query(query, (err, data) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(data);
+      }
+    });
+  }
 });
+// app.get('/api/main', (req, res) => {
+//   const query = 'SELECT * FROM snippets';
+//   db.query('SELECT * FROM snippets', (err, data) => {
+//     if (err) {
+//       // console.log(err);
+//     } else {
+//       res.send(data);
+//     }
+//   });
+// });
+
+// route to get snippets by language
+// app.get('/api/snippets', (req, res) => {
+//   const language = req.query.language;
+//   console.log(language);
+
+//   if (language) {
+//     const query = `SELECT * FROM snippets WHERE language = "${language}"`;
+//     db.query(query, (err, data) => {
+//       if (err) {
+//         console.log(err);
+//       } else {
+//         res.send(data);
+//       }
+//     });
+//   }
+// });
 
 // route to get a specific snippet
 app.get('/api/snippet/:id', (req, res) => {

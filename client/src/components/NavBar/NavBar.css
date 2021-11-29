@@ -1,6 +1,6 @@
 .navBar {
   z-index: 999;
-  width: 100%;
+  /* width: 90%; */
   color: white;
   /* display: flex; */
   justify-content: space-between;
@@ -8,6 +8,8 @@
   position: -webkit-sticky;
   top: 0;
   left: 0;
+  padding: 6rem !important;
+  border: 1px solid red;
 }
 
 .navbar h2 {

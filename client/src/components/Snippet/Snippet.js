@@ -3,7 +3,6 @@ import './Snippet.css';
 import { Link } from 'react-router-dom';
 
 const Snippet = ({ snippet }) => {
-  console.log(snippet);
   return (
     <div className='snippet'>
       <div className='card'>
@@ -14,7 +13,7 @@ const Snippet = ({ snippet }) => {
           <Link to={`/snippet/${snippet.id}`} className='link'>
             <h2 className='card-title'>{snippet.title}</h2>
           </Link>
-          <p className='card-text'>{snippet.description}.</p>
+          <p className='card-text'>{snippet.description}</p>
           <p className='card-text'>
             {new Date(snippet.created_at).toDateString()}
           </p>

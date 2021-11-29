@@ -5,7 +5,7 @@ import SideBar from './components/SideBar/SideBar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ShowSnippet from './components/ShowSnippet/ShowSnippet';
 import CreateSnippet from './components/CreateSnippet/CreateSnippet';
-import About from './components/About/About';
+import Snippets from './components/Snippets/Snippets';
 import LandingPage from './components/LandingPage/LandingPage';
 import UpdateSnippet from './components/UpdateSnippet/UpdateSnippet';
 import NavBar from './components/NavBar/NavBar';
@@ -22,7 +22,7 @@ function App() {
 
           <div className='container__rightSide'>
             <Routes>
-              <Route path='/' element={<About />} />
+              <Route path='/' element={<Snippets />} />
               <Route path='/' element={<LandingPage />} />
               {/* <Route path='/' element={<LandingPage />} /> */}
               <Route path='/snippet/:id' element={<ShowSnippet />} />
