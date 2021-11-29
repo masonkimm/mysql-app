@@ -1,8 +1,5 @@
 .navBar {
   z-index: 999;
-  /* width: 90%; */
-  color: white;
-  /* display: flex; */
   justify-content: space-between;
   position: sticky;
   position: -webkit-sticky;
@@ -14,12 +11,36 @@
 
 .navbar h2 {
   font-size: 30px;
+  color: #c1b5a6 !important;
 }
 .navbar-dark .navbar-nav .nav-link {
-  color: white;
+  color: #c1b5a6;
   font-size: 20px;
 }
 
 .navbar-toggler {
   border: 1px solid white !important;
+}
+
+.nav__logo {
+  margin-left: -18px;
+  /* margin-bottom: -5px; */
+  height: 4vmin;
+  pointer-events: none;
+  color: #c1b5a6 !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .nav__logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

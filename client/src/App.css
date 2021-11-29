@@ -24,9 +24,9 @@ html::-webkit-scrollbar {
   width: 100%;
   display: flex;
   padding: 2rem;
-  background: #101013;
-  /* background-image: url('https://images.unsplash.com/photo-1617265323394-59acd2b35d17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
-  background-size: cover; */
+  background: #0a0a5c;
+  background-image: url('https://images.unsplash.com/photo-1594747272740-9563f8170816?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
+  background-size: cover;
 }
 
 .container__rightSide {
@@ -41,6 +41,11 @@ html::-webkit-scrollbar {
   color: inherit;
   cursor: pointer;
 }
+.link:hover {
+  color: white;
+  text-decoration: none;
+}
+
 /* mobile responsive */
 @media (max-width: 600px) {
   .app {
@@ -53,8 +58,9 @@ html::-webkit-scrollbar {
   position: fixed;
   bottom: 0;
   right: 0;
-  height: 8vmin;
+  height: 7vmin;
   pointer-events: none;
+  color: #c1b5a6 !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -10,6 +10,8 @@ import LandingPage from './components/LandingPage/LandingPage';
 import UpdateSnippet from './components/UpdateSnippet/UpdateSnippet';
 import NavBar from './components/NavBar/NavBar';
 
+import video3 from './components/LandingPage/spinning-vinyl.mp4';
+
 function App() {
   return (
     <Router>
@@ -32,7 +34,7 @@ function App() {
           </div>
         </div>
 
-        <img src={logo} className='app-logo' alt='logo' />
+        {/* <img src={logo} className='app-logo' alt='logo' /> */}
       </div>
     </Router>
   );

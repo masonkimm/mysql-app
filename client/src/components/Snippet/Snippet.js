@@ -14,7 +14,7 @@ const Snippet = ({ snippet }) => {
             <h2 className='card-title'>{snippet.title}</h2>
           </Link>
           <p className='card-text'>{snippet.description}</p>
-          <p className='card-text'>
+          <p className='card-text snippet__date'>
             {new Date(snippet.created_at).toDateString()}
           </p>
         </div>

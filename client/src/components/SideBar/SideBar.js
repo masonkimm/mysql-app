@@ -32,11 +32,11 @@ const SideBar = () => {
       <div className='sideBar__top'>
         <h4 className='sideBar__title'>Menu</h4>
         <div className='sideBar__menuItems'>
-          <Link to={'/'}>
-            <button className='btn btn-secondary'>View All</button>
+          <Link to={'/'} className='link'>
+            <button className='btn'>View All</button>
           </Link>
-          <Link to={'/snippet/create'}>
-            <button className='btn btn-secondary'>Create New</button>
+          <Link to={'/snippet/create'} className='link'>
+            <button className='btn'>Create New</button>
           </Link>
         </div>
       </div>
@@ -51,7 +51,6 @@ const SideBar = () => {
                 className='link'>
                 <button className='btn'>{language}</button>
               </Link>
-              // <Snippet snippet={snippet} key={snippet.id} />
             ))}
         </div>
       </div>

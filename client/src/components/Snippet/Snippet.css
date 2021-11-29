@@ -9,13 +9,16 @@
   width: 15em;
   height: 300px;
   border-radius: 10px;
-  box-shadow: 2px 2px black;
-  background: #c3c3c7;
+  /* box-shadow: 2px 2px #c1b5a6; */
+  box-shadow: 2px 2px #443b3b;
+
+  background: transparent;
   /* background: #c0e7ec;
   background: #babadc; */
+  border: 1px solid #c1b5a6;
 }
 .snippet .card i {
-  font-size: 100px;
+  font-size: 50px;
   text-align: center;
   padding: 10px 0;
   border-bottom: 1px solid lightgray;
@@ -25,6 +28,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  color: #c1b5a6;
 }
 .card-body h2 {
   text-align: center;
@@ -48,6 +52,9 @@
 .snippet__item i {
   margin-right: 10px;
   font-size: 25px;
+}
+.snippet__date {
+  color: gray;
 }
 
 /* .snippet {
