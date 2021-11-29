@@ -1,49 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Link as Scroll } from 'react-scroll';
 import './NavBar.css';
 
 const NavBar = () => {
   return (
-    <div className='navBar'>
-      <nav className='navbar navbar-expand-lg navbar-light bg-light'>
-        <Link to={'/'}>
-          <span className='navbar-brand'>Snippet App</span>
-        </Link>
-        <button
-          className='navbar-toggler'
-          type='button'
-          data-toggle='collapse'
-          data-target='#navbarSupportedContent'
-          aria-controls='navbarSupportedContent'
-          aria-expanded='false'
-          aria-label='Toggle navigation'>
-          <span className='navbar-toggler-icon'></span>
-        </button>
+    <nav className='navbar navbar-expand-lg navbar-dark  sticky-top p-5'>
+      <Link to={'/'}>
+        <h2 className='navbar-brand'>Snippet App</h2>
+      </Link>
+      <button
+        className='navbar-toggler'
+        type='button'
+        data-toggle='collapse'
+        data-target='#navbarSupportedContent'
+        aria-controls='navbarSupportedContent'
+        aria-expanded='false'
+        aria-label='Toggle navigation'>
+        <span className='navbar-toggler-icon '></span>
+      </button>
 
-        <div className='collapse navbar-collapse' id='navbarSupportedContent'>
-          <ul className='navbar-nav mr-auto'>
-            <li className='nav-item active'>
-              <Link to={'/'}>
-                <span className='nav-link'>
-                  Home <span className='sr-only'>(current)</span>
-                </span>
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to={'/snippet/create'}>
-                <span className='nav-link' href='#createNew'>
-                  Create New
-                </span>
-              </Link>
-            </li>
+      <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+        <ul className='navbar-nav ml-auto'>
+          <li className='nav-item active'>
+            <Link to={'/'}>
+              <span className='nav-link'>
+                Home <span className='sr-only'>(current)</span>
+              </span>
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to={'/snippet/create'}>
+              <span className='nav-link'>Create New</span>
+            </Link>
+          </li>
 
-            <li className='nav-item'>
-              <Link to={'/about'}>
-                <span className='nav-link '>About</span>
-              </Link>
-            </li>
-          </ul>
-          <form className='form-inline my-2 my-lg-0'>
+          <li className='nav-item'>
+            <Link to={'/about'}>
+              <span className='nav-link '>About</span>
+            </Link>
+          </li>
+        </ul>
+        {/* <form className='form-inline my-2 my-lg-0'>
             <input
               className='form-control mr-sm-2'
               type='search'
@@ -55,10 +53,9 @@ const NavBar = () => {
               type='submit'>
               Search
             </button>
-          </form>
-        </div>
-      </nav>
-    </div>
+          </form> */}
+      </div>
+    </nav>
   );
 };
 

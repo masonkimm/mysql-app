@@ -19,10 +19,16 @@ const CreateSnippet = () => {
     };
     try {
       const res = await axios.post('/snippet/create', newSnippetData);
-      console.log(res.data.insertId);
+      // console.log(res.data.insertId);
       const id = res.data.insertId;
-      window.location.replace('/snippet/' + id);
-    } catch (err) {}
+      // window.location.replace('/snippet/' + id);
+      window.location.replace(`/snippet/${id}`);
+      // window.location.replace(`/snippet/${id}/#app__container`);
+
+      // window.location.hash = '#app__container';
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (

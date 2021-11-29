@@ -1,4 +1,73 @@
 .landingPage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  min-height: 40vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: white;
+  z-index: 2;
+  /* border: 1px solid red; */
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landingPage video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.text {
+  position: relative;
+  z-index: 10;
+}
+.text h2 {
+  font-size: 5em;
+  font-weight: 700;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+.text h3 {
+  /* font-size: 5em; */
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.text p {
+  font-size: 1.1em;
+  font-weight: 400;
+  margin: 20px 0;
+  text-transform: uppercase;
+  max-width: 700px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #03a9f4;
+  mix-blend-mode: overlay;
+}
+
+/* .landingPage {
   height: 100%;
   object-fit: contain;
 }
@@ -10,4 +79,4 @@
 
 .landingPage h1 {
   color: white;
-}
+} */

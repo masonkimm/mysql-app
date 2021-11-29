@@ -5,28 +5,33 @@
 html {
   margin: 0;
   padding: 0;
-  object-fit: contain;
+  box-sizing: border-box;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 .app {
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 100vh;
 }
 .app__container {
-  /* max-height: 60vh; */
+  position: absolute;
   height: 60vh;
+  top: 40%;
   width: 100%;
   display: flex;
   padding: 2rem;
-  /* background-color: lightblue; */
-  /* border: 1px solid red; */
+  /* background: rgb(82, 121, 158); */
 }
 
 .container__rightSide {
   flex: 9;
+  height: auto;
   margin: 0 1rem;
-  border: 1px solid purple;
+  object-fit: contain;
 }
 
 .link {

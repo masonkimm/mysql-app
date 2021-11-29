@@ -1,0 +1,23 @@
+.navBar {
+  z-index: 999;
+  width: 100%;
+  color: white;
+  /* display: flex; */
+  justify-content: space-between;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  left: 0;
+}
+
+.navbar h2 {
+  font-size: 30px;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  font-size: 20px;
+}
+
+.navbar-toggler {
+  border: 1px solid white !important;
+}

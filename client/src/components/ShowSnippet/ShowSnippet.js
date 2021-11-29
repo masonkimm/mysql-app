@@ -9,6 +9,7 @@ import '../../../node_modules/highlight.js/styles/stackoverflow-dark.css';
 const ShowSnippet = () => {
   const location = useLocation();
   const path = location.pathname.split('/')[2];
+  // console.log(path);
 
   const [snippet, setSnippet] = useState([]);
   const [updateMode, setUpdateMode] = useState(false);
@@ -29,7 +30,7 @@ const ShowSnippet = () => {
         const res = await axios.get(`/snippet/${path}`);
         // console.log(res.data);
         await setSnippet(res.data);
-        console.log(res.data[0]);
+        // console.log(res.data[0]);
         setTitle(res.data[0].title);
         setLanguage(res.data[0].language);
         setDescription(res.data[0].description);
@@ -52,7 +53,9 @@ const ShowSnippet = () => {
         snippet: updatedSnippet || snippetBody,
       });
       window.location.replace(`/snippet/${path}`);
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const handleDelete = async () => {

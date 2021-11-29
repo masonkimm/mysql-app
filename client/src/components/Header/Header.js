@@ -1,27 +1,24 @@
 import React from 'react';
 import './Header.css';
-// import video from './video2.mp4';
+import video from './video2.mp4';
 
 const Header = () => {
   return (
-    <div className='header'>
-      <div className='header__title'>
-        <h1 className='title__big'>Snippet App</h1>
-        <p className='title__small'>MySQL - Express - React - Node</p>
-      </div>
-
-      <div className='header__img'>
-        {/* <video autoPlay loop muted>
-          <source src={video} type='video/mp4' />
-        </video> */}
-        <img
-          src='https://images.unsplash.com/photo-1602659408748-ecdc55ed7a50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
-          alt='floppy disks'
-        />
-        {/* <img
-          src='https://images.unsplash.com/photo-1618912487390-8987d3c3b862?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
-          alt='floppy disks'
-        /> */}
+    <div className='header showcase'>
+      <video autoPlay loop muted>
+        <source src={video} type='video/mp4' />
+      </video>
+      <div className='overlay'></div>
+      <div className='header__title text'>
+        <h2 className='title__big'>Snippet App</h2>
+        <h3 className='title__small'>MySQL - Express - React - Node</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+          maiores dignissimos consequuntur, quaerat placeat ab molestias
+          blanditiis quae veniam, minus aliquid assumenda quia harum sit ex
+          perferendis sint. Consequuntur, aut?
+        </p>
+        <button className='btn btn-secondary'>get Started</button>
       </div>
     </div>
   );

@@ -16,6 +16,21 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+.sideBar__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.sideBar__menuItems {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 2rem;
+}
 .sideBar__items {
   display: flex;
   flex-direction: column;
