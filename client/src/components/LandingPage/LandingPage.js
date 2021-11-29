@@ -1,13 +1,15 @@
 import React from 'react';
 import './LandingPage.css';
 import video from './video2.mp4';
+import video3 from './spinning-vinyl.mp4';
+
 import { Link } from 'react-scroll';
 
 const LandingPage = () => {
   return (
     <div className='landingPage'>
       <video autoPlay loop muted>
-        <source src={video} type='video/mp4' />
+        <source src={video3} type='video/mp4' />
       </video>
       <div className='overlay'></div>
       <div className='landingPage__title text'>

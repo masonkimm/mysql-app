@@ -20,13 +20,13 @@ html::-webkit-scrollbar {
 .app__container {
   position: absolute;
   min-height: 60vh;
-  top: 40%;
+  top: 45%;
   width: 100%;
   display: flex;
   padding: 2rem;
-  /* background: #c0e7ec; */
-  background-image: url('https://images.unsplash.com/photo-1471671097732-93d190725447?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=926&q=80');
-  background-size: cover;
+  background: #101013;
+  /* background-image: url('https://images.unsplash.com/photo-1617265323394-59acd2b35d17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover; */
 }
 
 .container__rightSide {

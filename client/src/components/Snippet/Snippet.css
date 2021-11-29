@@ -6,11 +6,11 @@
   /* border: 1px solid red; */
 }
 .snippet .card {
-  width: 18em;
-  height: 350px;
+  width: 15em;
+  height: 300px;
   border-radius: 10px;
-  box-shadow: 2px 2px lightgray;
-  /* background: #89d2dc; */
+  box-shadow: 2px 2px black;
+  background: #c3c3c7;
   /* background: #c0e7ec;
   background: #babadc; */
 }
