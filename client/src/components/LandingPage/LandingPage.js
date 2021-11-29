@@ -19,17 +19,17 @@ const LandingPage = () => {
           Express <img src={logo} className='logo' alt='logo' /> React
           <img src={logo} className='logo' alt='logo' /> Node
         </h3>
-        <p>
+        {/* <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
           maiores dignissimos consequuntur, quaerat placeat ab molestias
           blanditiis quae veniam, minus aliquid assumenda quia harum sit ex
           perferendis sint. Consequuntur, aut?
-        </p>
-        <Link to='app__container' smooth={true} spy={true}>
+        </p> */}
+        {/* <Link to='app__container' smooth={true} spy={true}>
           <button className='btn btn-secondary' href='#app__container'>
             get Started
           </button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

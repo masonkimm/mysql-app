@@ -4,33 +4,33 @@ import { useLocation } from 'react-router';
 // import { Link } from 'react-router-dom';
 import './ShowSnippet.css';
 import Highlight from 'react-highlight';
-import '../../../node_modules/highlight.js/styles/stackoverflow-dark.css';
+// import '../../../node_modules/highlight.js/styles/stackoverflow-light.css';
+import './agate.css';
 
 const ShowSnippet = () => {
   const location = useLocation();
   const path = location.pathname.split('/')[2];
-  // console.log(path);
-
   const [snippet, setSnippet] = useState([]);
   const [updateMode, setUpdateMode] = useState(false);
 
+  // states for snippets
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [language, setLanguage] = useState('');
   const [snippetBody, setSnippetBody] = useState('');
 
+  // states for updated snippets
   const [updatedTitle, setUpdatedTitle] = useState('');
   const [updatedDescription, setUpdatedDescription] = useState('');
   const [updatedLanguage, setUpdatedLanguage] = useState('');
   const [updatedSnippet, setUpdatedSnippet] = useState('');
 
+  // to fetch snippet data
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await axios.get(`/snippet/${path}`);
-        // console.log(res.data);
         await setSnippet(res.data);
-        // console.log(res.data[0]);
         setTitle(res.data[0].title);
         setLanguage(res.data[0].language);
         setDescription(res.data[0].description);
@@ -43,6 +43,7 @@ const ShowSnippet = () => {
     setUpdateMode(false);
   }, [path]);
 
+  // to update snippets
   const handleUpdate = async () => {
     try {
       await axios.put(`/snippet/update`, {
@@ -57,7 +58,7 @@ const ShowSnippet = () => {
       console.log(err);
     }
   };
-
+  // to delete snippets
   const handleDelete = async () => {
     try {
       await axios.delete(`/delete/${path}`);
@@ -85,7 +86,7 @@ const ShowSnippet = () => {
                     }}
                   />
                 ) : (
-                  <h1>{snippet.title}</h1>
+                  <h1 className='showSnippet__title'>{snippet.title}</h1>
                 )}
               </div>
               <div className='topRow__rightSide'>
@@ -99,15 +100,7 @@ const ShowSnippet = () => {
             </div>
             <div className='item__bottomRow'>
               {updateMode ? (
-                <div className='item__left'>
-                  {/* <input
-                    // placeholder={snippet.language}
-                    defaultValue={snippet.language}
-                    onChange={(e) => {
-                      e.preventDefault();
-                      setUpdatedLanguage(e.target.value);
-                    }}
-                  /> */}
+                <div className='showSnippet__itemsLeft'>
                   <div className='form-group'>
                     <label htmlFor=''>Select Language</label>
                     <select
@@ -145,20 +138,31 @@ const ShowSnippet = () => {
                   </div>
                 </div>
               ) : (
-                <div className='item__left'>
-                  <p>snippet id:{snippet.id}</p>
-                  <p>language: {snippet.language}</p>
-                  <p>description: {snippet.description}</p>
+                <div className='showSnippet__itemsLeft'>
+                  {/* <div className='itemsLeft__info'>
+                    <span> snippet ID:</span> <h4>{snippet.id}</h4>
+                  </div> */}
+                  <div className='itemsLeft__info'>
+                    <span>Language:</span> <h4>{snippet.language}</h4>
+                  </div>
+                  <div className='itemsLeft__info'>
+                    <span>Description:</span>
+                    <p> {snippet.description}</p>
+                  </div>
+                  <div className='itemsLeft__info'>
+                    <span>Created At:</span>
+                    <p> {new Date(snippet.created_at).toDateString()}</p>
+                  </div>
                 </div>
               )}
 
-              <div className='item__right'>
+              <div className='showSnippet__itemsRight'>
                 {updateMode ? (
                   <div className='form-group'>
                     <label htmlFor=''>Snippet</label>
                     <textarea
-                      cols='30'
-                      rows='17'
+                      cols='20'
+                      rows='11'
                       className='form-control'
                       defaultValue={snippet.snippet}
                       onChange={(e) => {
@@ -167,7 +171,9 @@ const ShowSnippet = () => {
                       }}></textarea>
                   </div>
                 ) : (
-                  <Highlight>snippet: {snippet.snippet}</Highlight>
+                  <div className='itemsRight__info'>
+                    <Highlight>{snippet.snippet}</Highlight>
+                  </div>
                 )}
               </div>
             </div>

@@ -17,6 +17,7 @@
   flex-wrap: wrap;
   color: #c1b5a6;
   padding-top: 20px;
+  font-style: italic;
 }
 .sideBar__top {
   display: flex;
