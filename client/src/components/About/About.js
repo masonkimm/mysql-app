@@ -1,14 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+// import { Link } from 'react-router-dom';
+import Snippet from '../Snippet/Snippet';
 import './About.css';
 
 const About = () => {
+  const [snippets, setSnippets] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get('/main');
+        // console.log(res.data);
+        await setSnippets(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <div className='about'>
-      <h1>About the this app</h1>
-      <Link to={'/snippet/create'}>
-        <button>Create New</button>
-      </Link>
+      {snippets &&
+        snippets.map((snippet) => (
+          <Snippet snippet={snippet} key={snippet.id} />
+        ))}
     </div>
   );
 };

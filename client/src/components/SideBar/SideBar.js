@@ -26,7 +26,7 @@ const SideBar = () => {
         <h4 className='sideBar__title'>Menu</h4>
         <div className='sideBar__menuItems'>
           <Link to={'/'}>
-            <button className='btn btn-secondary'>Reset</button>
+            <button className='btn btn-secondary'>View All</button>
           </Link>
           <Link to={'/snippet/create'}>
             <button className='btn btn-secondary'>Create New</button>
@@ -34,12 +34,12 @@ const SideBar = () => {
         </div>
       </div>
       <div className='sideBar__bottom'>
-        <h4 className='sideBar__title'>Saved List</h4>
+        <h4 className='sideBar__title'>Languages</h4>
         <div className='side__items'>
-          {snippets &&
+          {/* {snippets &&
             snippets.map((snippet) => (
               <Snippet snippet={snippet} key={snippet.id} />
-            ))}
+            ))} */}
         </div>
       </div>
     </div>

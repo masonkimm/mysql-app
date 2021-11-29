@@ -1,8 +1,29 @@
 .snippet {
   display: flex;
   justify-content: center;
-  width: 100%;
+  margin: 2rem;
+  /* width: 100%; */
   /* border: 1px solid red; */
+}
+.snippet .card {
+  width: 18em;
+  height: 350px;
+  border-radius: 10px;
+}
+.snippet .card i {
+  font-size: 100px;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+  /* object-fit: contain; */
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card-body h2 {
+  text-align: center;
 }
 
 .snippet__item {
@@ -24,3 +45,29 @@
   margin-right: 10px;
   font-size: 25px;
 }
+
+/* .snippet {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.snippet__item {
+  border: 1px solid lightgray;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.snippet__item {
+  font-size: 20px;
+}
+
+.snippet__item i {
+  margin-right: 10px;
+  font-size: 25px;
+} */
