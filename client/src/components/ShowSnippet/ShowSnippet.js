@@ -74,7 +74,7 @@ const ShowSnippet = () => {
               <div className='topRow__leftSide'>
                 <i
                   className={`devicon-${snippet.language}-plain  colored devicon`}
-                />{' '}
+                />
                 {updateMode ? (
                   <input
                     className='form-control'

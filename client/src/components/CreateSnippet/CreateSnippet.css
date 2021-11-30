@@ -9,7 +9,8 @@
 }
 .container__title {
   margin-bottom: 2rem;
-  color: #c1b5a6;
+  color: white;
+  text-align: center;
 }
 .createSnippet__container {
   margin-top: 2rem;
@@ -22,7 +23,9 @@
   font-weight: 600;
   font-style: italic;
 }
-
+.form-control {
+  background-color: #c1b5a6;
+}
 .createSnippet button {
   margin-top: 20px;
   color: #c1b5a6;
