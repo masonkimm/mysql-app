@@ -6,6 +6,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* overflow-x: hidden; */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -24,6 +25,7 @@ html::-webkit-scrollbar {
   top: 40%;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   padding: 2rem;
   background: #000000;
   background-size: cover;
@@ -50,13 +52,6 @@ html::-webkit-scrollbar {
   text-decoration: none;
 }
 
-/* mobile responsive */
-@media (max-width: 600px) {
-  .app {
-    overflow-x: hidden;
-  }
-}
-
 /* LOGO */
 .app-logo {
   position: fixed;
@@ -79,5 +74,26 @@ html::-webkit-scrollbar {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* mobile responsive */
+@media (max-width: 675px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  .app {
+    overflow-x: scroll;
+  }
+
+  .app__container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10rem;
+    /* padding-right: rem; */
+    /* margin-right: 2rem; */
+    /* margin-left: -1rem; */
+    /* padding-left: -3rem; */
   }
 }

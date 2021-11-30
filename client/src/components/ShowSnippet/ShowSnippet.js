@@ -142,7 +142,7 @@ const ShowSnippet = () => {
                     <span> snippet ID:</span> <h4>{snippet.id}</h4>
                   </div> */}
                   <div className='itemsLeft__info'>
-                    <span>Language:</span> <h4>{snippet.language}</h4>
+                    <span>Language:</span> <p>{snippet.language}</p>
                   </div>
                   <div className='itemsLeft__info'>
                     <span>Description:</span>
@@ -170,7 +170,7 @@ const ShowSnippet = () => {
                       }}></textarea>
                   </div>
                 ) : (
-                  <div className='itemsRight__info'>
+                  <div className='itemsRight__infoSnippet'>
                     <Highlight>{snippet.snippet}</Highlight>
                   </div>
                 )}

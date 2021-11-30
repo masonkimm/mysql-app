@@ -1,9 +1,6 @@
 .showSnippet {
-  /* padding: 4rem; */
   height: 100%;
   width: 85%;
-  /* border: 1px solid red; */
-  /* margin-top: 2rem; */
 }
 
 .showSnippet__item {
@@ -19,8 +16,7 @@
   align-items: center;
   width: 100%;
   padding: 20px;
-  /* padding-bottom: 2rem; */
-  /* margin: 2.5rem 0; */
+  margin-top: 2.8rem;
 }
 
 .topRow__leftSide {
@@ -42,7 +38,8 @@
   width: 80%;
   background-color: #c1b5a6;
   color: black;
-  margin: 2.5rem 0;
+
+  margin: 2rem 0;
 }
 
 .topRow__rightSide {
@@ -102,8 +99,9 @@
 }
 
 .showSnippet__itemsRight {
-  padding: 20px;
+  padding: 25px;
   flex: 9;
+  margin-left: 20px;
 }
 .showSnippet__itemsRight .form-group {
   margin-left: 20px;
@@ -128,10 +126,61 @@
 
 .showSnippet button {
   margin-top: 20px;
-
   color: #c1b5a6;
   border: 1px solid #c1b5a6;
 }
 .showSnippet button:hover {
   color: white;
+}
+
+@media (max-width: 675px) {
+  .showSnippet {
+    width: 100%;
+  }
+  .item__topRow {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+  }
+  .topRow__leftSide,
+  .topRow__rightSide {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  .topRow__rightSide .editBtn,
+  .topRow__rightSide .deleteBtn {
+    font-size: 20px;
+  }
+
+  .item__bottomRow {
+    display: flex;
+    flex-direction: column;
+  }
+  .showSnippet__itemsLeft {
+    border: none;
+  }
+  .itemsLeft__info span {
+    font-size: 20px;
+  }
+  .itemsLeft__info p {
+    font-size: 25px;
+  }
+
+  .item__bottomRow {
+    border: none;
+  }
+
+  .showSnippet__itemsRight {
+    width: 100%;
+    width: 370px;
+    padding: 0;
+    margin-top: 2rem;
+  }
+  .itemsRight__infoSnippet {
+    width: 100%;
+    padding: 0;
+    font-size: 18px;
+  }
 }
