@@ -1,4 +1,11 @@
 module.exports = {
+  local: {
+    host: 'localhost',
+    port: 4000,
+    user: 'root',
+    password: 'password',
+    database: 'snippet_app',
+  },
   heroku: {
     host: 'w3epjhex7h2ccjxx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     user: 'pmb0jh2ku0tvbo81',

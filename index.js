@@ -3,17 +3,20 @@ const mysql = require('mysql');
 const path = require('path');
 
 const app = express();
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const PORT = process.env.PORT || 4000;
 
 // const config = require('./config/connnectDB');
+
 const config = require('./config/db');
 
 // const dbConfig =
 //   process.env.NODE_ENV === 'production' ? config.heroku : config.local;
 // const dbConfig = config.local;
-const dbConfig = config.heroku;
+const dbConfig =
+  process.env.NODE_ENV === 'production' ? config.heroku : config.local;
 
 const db = mysql.createConnection(dbConfig);
 
