@@ -6,7 +6,7 @@ import logo from '../../logo.svg';
 const NavBar = () => {
   return (
     <nav
-      className='navbar navbar-expand-lg navbar-dark  sticky-top p-4 mr-5 ml-2 navBar'
+      className='navbar navbar-expand-lg navbar-dark  sticky-top p-4 mr-5 ml-2 '
       id='navBar'>
       <img src={logo} className='nav__logo' alt='logo' />
 
@@ -37,26 +37,12 @@ const NavBar = () => {
               <span className='nav-link'>Create New</span>
             </Link>
           </li>
-
           <li className='nav-item'>
             <Link to={'/about'} className='link'>
               <span className='nav-link '>About</span>
             </Link>
           </li>
         </ul>
-        {/* <form className='form-inline my-2 my-lg-0'>
-            <input
-              className='form-control mr-sm-2'
-              type='search'
-              placeholder='Search'
-              aria-label='Search'
-            />
-            <button
-              className='btn btn-outline-success my-2 my-sm-0'
-              type='submit'>
-              Search
-            </button>
-          </form> */}
       </div>
     </nav>
   );

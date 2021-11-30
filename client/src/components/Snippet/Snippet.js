@@ -24,16 +24,3 @@ const Snippet = ({ snippet }) => {
 };
 
 export default Snippet;
-
-/* <span className='snippet__item btn'>
-        <Link to={`/snippet/${snippet.id}`} className='link'>
-          {snippet.title}
-        </Link>
-      </span> */
-
-/* <span  className='snippet__item btn'>
-        <i className={`devicon-${snippet.language}-plain  colored`} />{' '}
-        <Link to={`/snippet/${snippet.id}`} className='link'>
-          {snippet.title}
-        </Link>
-      </span> */

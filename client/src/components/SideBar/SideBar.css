@@ -7,10 +7,9 @@
   scrollbar-width: none; /* Firefox */
 }
 /* Hide scroll bar for chrome, safari, and opera */
-.sideBar::-webkit-scrollbar {
+/* .sideBar::-webkit-scrollbar {
   display: none;
-}
-
+} */
 .sideBar__title {
   margin: 20px 0;
   display: flex;
@@ -32,7 +31,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* border-bottom: 1px solid #c1b5a6; */
   padding-bottom: 0.5rem;
 }
 .sideBar__bottom {
@@ -42,7 +40,6 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-
 .sideBar__items {
   display: flex;
   flex-direction: column;
@@ -57,12 +54,10 @@
 .sideBar__items::-webkit-scrollbar {
   display: none;
 }
-
 .sideBar__bottom,
 .sideBar__top {
   border-top: 1px solid #c1b5a6;
 }
-
 .sideBar__item {
   display: flex;
   align-items: center;
