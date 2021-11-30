@@ -9,7 +9,7 @@ const SideBar = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('/main');
+        const res = await axios.get('https://sjk-snippets.herokuapp.com/main');
         await setSnippets(res.data);
       } catch (err) {
         console.log(err);
@@ -26,30 +26,31 @@ const SideBar = () => {
   console.log(filteredLang);
 
   return (
-    <div className='sideBar'>
-      <div className='sideBar__top'>
-        <h4 className='sideBar__title'>Menu</h4>
-        <div className='sideBar__menuItems'>
-          <Link to={'/'} className='link'>
-            <button className='btn'>View All</button>
+    <div className="sideBar">
+      <div className="sideBar__top">
+        <h4 className="sideBar__title">Menu</h4>
+        <div className="sideBar__menuItems">
+          <Link to={'/'} className="link">
+            <button className="btn">View All</button>
           </Link>
-          <Link to={'/snippet/create'} className='link'>
-            <button className='btn'>Create New</button>
+          <Link to={'/snippet/create'} className="link">
+            <button className="btn">Create New</button>
           </Link>
         </div>
       </div>
-      <div className='sideBar__bottom'>
-        <h4 className='sideBar__title'>Languages</h4>
-        <div className='sideBar__items'>
+      <div className="sideBar__bottom">
+        <h4 className="sideBar__title">Languages</h4>
+        <div className="sideBar__items">
           {filteredLang &&
             filteredLang.map((language) => (
               <Link
                 to={`/?language=${language}`}
                 key={language}
-                className='link'>
-                <div className='sideBar__item'>
+                className="link"
+              >
+                <div className="sideBar__item">
                   <i className={`devicon-${language}-plain  colored`} />
-                  <button className='btn'>{language}</button>
+                  <button className="btn">{language}</button>
                 </div>
               </Link>
             ))}

@@ -11,7 +11,9 @@ const Snippets = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`/main${search}`);
+        const res = await axios.get(
+          `https://sjk-snippets.herokuapp.com/main${search}`
+        );
         await setSnippets(res.data);
       } catch (err) {
         console.log(err);
@@ -21,7 +23,7 @@ const Snippets = () => {
   }, [search]);
 
   return (
-    <div className='snippets'>
+    <div className="snippets">
       {snippets &&
         snippets.map((snippet) => (
           <Snippet snippet={snippet} key={snippet.id} />

@@ -28,7 +28,9 @@ const ShowSnippet = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`/snippet/${path}`);
+        const res = await axios.get(
+          `https://sjk-snippets.herokuapp.com/snippet/${path}`
+        );
         await setSnippet(res.data);
         setTitle(res.data[0].title);
         setLanguage(res.data[0].language);
@@ -45,14 +47,16 @@ const ShowSnippet = () => {
   // to update snippets
   const handleUpdate = async () => {
     try {
-      await axios.put(`/snippet/update`, {
+      await axios.put(`https://sjk-snippets.herokuapp.com/snippet/update`, {
         id: path,
         title: updatedTitle || title,
         language: updatedLanguage || language,
         description: updatedDescription || description,
         snippet: updatedSnippet || snippetBody,
       });
-      window.location.replace(`/snippet/${path}`);
+      window.location.replace(
+        `https://sjk-snippets.herokuapp.com/snippet/${path}`
+      );
     } catch (err) {
       console.log(err);
     }
@@ -60,24 +64,24 @@ const ShowSnippet = () => {
   // to delete snippets
   const handleDelete = async () => {
     try {
-      await axios.delete(`/delete/${path}`);
+      await axios.delete(`https://sjk-snippets.herokuapp.com/delete/${path}`);
       window.location.replace('/');
     } catch (err) {}
   };
 
   return (
-    <div className='showSnippet'>
+    <div className="showSnippet">
       {snippet &&
         snippet.map((snippet) => (
-          <div className='showSnippet__item' key={snippet.id}>
-            <div className='showSnippet__topRow'>
-              <div className='showSnippet__topRow__leftSide'>
+          <div className="showSnippet__item" key={snippet.id}>
+            <div className="showSnippet__topRow">
+              <div className="showSnippet__topRow__leftSide">
                 <i
                   className={`devicon-${snippet.language}-plain  colored devicon`}
                 />
                 {updateMode ? (
                   <input
-                    className='form-control'
+                    className="form-control"
                     defaultValue={snippet.title}
                     onChange={(e) => {
                       e.preventDefault();
@@ -85,53 +89,56 @@ const ShowSnippet = () => {
                     }}
                   />
                 ) : (
-                  <h1 className='showSnippet__topRow__leftSide__title'>
+                  <h1 className="showSnippet__topRow__leftSide__title">
                     {snippet.title}
                   </h1>
                 )}
               </div>
-              <div className='showSnippet__topRow__rightSide'>
+              <div className="showSnippet__topRow__rightSide">
                 {!updateMode && (
                   <i
-                    className='editBtn far fa-edit'
-                    onClick={() => setUpdateMode(true)}></i>
+                    className="editBtn far fa-edit"
+                    onClick={() => setUpdateMode(true)}
+                  ></i>
                 )}
                 <i
-                  className='deleteBtn fas fa-trash-alt'
-                  onClick={handleDelete}></i>
+                  className="deleteBtn fas fa-trash-alt"
+                  onClick={handleDelete}
+                ></i>
               </div>
             </div>
-            <div className='showSnippet__bottomRow'>
+            <div className="showSnippet__bottomRow">
               {updateMode ? (
-                <div className='showSnippet__bottomRow__leftSide__update'>
-                  <div className='form-group'>
-                    <label htmlFor=''>Select Language</label>
+                <div className="showSnippet__bottomRow__leftSide__update">
+                  <div className="form-group">
+                    <label htmlFor="">Select Language</label>
                     <select
-                      className='form-control'
-                      name=''
-                      id='snippetLanguage'
+                      className="form-control"
+                      name=""
+                      id="snippetLanguage"
                       defaultValue={snippet.language}
-                      onChange={(e) => setUpdatedLanguage(e.target.value)}>
-                      <option value=''>Select One</option>
-                      <option value='html5'>HTML 5</option>
-                      <option value='javascript'>JavaScript</option>
-                      <option value='css3'>CSS 3</option>
-                      <option value='c'>C</option>
-                      <option value='csharp'>C#</option>
-                      <option value='cplusplus'>C++</option>
-                      <option value='python'>Python</option>
-                      <option value='java'>Java</option>
-                      <option value='go'>Go</option>
-                      <option value='r'>R</option>
-                      <option value='swift'>Swift</option>
-                      <option value='php'>PHP</option>
-                      <option value='ruby'>Ruby</option>
+                      onChange={(e) => setUpdatedLanguage(e.target.value)}
+                    >
+                      <option value="">Select One</option>
+                      <option value="html5">HTML 5</option>
+                      <option value="javascript">JavaScript</option>
+                      <option value="css3">CSS 3</option>
+                      <option value="c">C</option>
+                      <option value="csharp">C#</option>
+                      <option value="cplusplus">C++</option>
+                      <option value="python">Python</option>
+                      <option value="java">Java</option>
+                      <option value="go">Go</option>
+                      <option value="r">R</option>
+                      <option value="swift">Swift</option>
+                      <option value="php">PHP</option>
+                      <option value="ruby">Ruby</option>
                     </select>
                   </div>
-                  <div className='form-group'>
-                    <label htmlFor=''>Description</label>
+                  <div className="form-group">
+                    <label htmlFor="">Description</label>
                     <input
-                      className='form-control'
+                      className="form-control"
                       defaultValue={snippet.description}
                       onChange={(e) => {
                         e.preventDefault();
@@ -141,50 +148,52 @@ const ShowSnippet = () => {
                   </div>
                 </div>
               ) : (
-                <div className='showSnippet__bottomRow__leftSide__show'>
-                  <div className='showSnippet__bottomRow__leftSide__info'>
+                <div className="showSnippet__bottomRow__leftSide__show">
+                  <div className="showSnippet__bottomRow__leftSide__info">
                     <span>language:</span> <p>{snippet.language}</p>
                   </div>
-                  <div className='showSnippet__bottomRow__leftSide__info'>
+                  <div className="showSnippet__bottomRow__leftSide__info">
                     <span>description:</span>
                     <p> {snippet.description}</p>
                   </div>
-                  <div className='showSnippet__bottomRow__leftSide__info'>
+                  <div className="showSnippet__bottomRow__leftSide__info">
                     <span>created At:</span>
                     <p> {new Date(snippet.created_at).toDateString()}</p>
                   </div>
                 </div>
               )}
 
-              <div className='showSnippet__bottomRow__rightSide'>
+              <div className="showSnippet__bottomRow__rightSide">
                 {updateMode ? (
-                  <div className='form-group'>
-                    <label htmlFor=''>Snippet</label>
+                  <div className="form-group">
+                    <label htmlFor="">Snippet</label>
                     <textarea
-                      cols='20'
-                      rows='15'
-                      className='form-control'
+                      cols="20"
+                      rows="15"
+                      className="form-control"
                       defaultValue={snippet.snippet}
                       onChange={(e) => {
                         e.preventDefault();
                         setUpdatedSnippet(e.target.value);
-                      }}></textarea>
+                      }}
+                    ></textarea>
                   </div>
                 ) : (
-                  <div className='showSnippet__bottomRow__snippet'>
+                  <div className="showSnippet__bottomRow__snippet">
                     <Highlight>{snippet.snippet}</Highlight>
                   </div>
                 )}
               </div>
             </div>
             {updateMode && (
-              <div className='showSnippet__buttons'>
+              <div className="showSnippet__buttons">
                 <button
-                  className='btn cancel__btn'
-                  onClick={() => setUpdateMode(false)}>
+                  className="btn cancel__btn"
+                  onClick={() => setUpdateMode(false)}
+                >
                   Cancel{' '}
                 </button>
-                <button className='btn update__btn' onClick={handleUpdate}>
+                <button className="btn update__btn" onClick={handleUpdate}>
                   Submit{' '}
                 </button>
               </div>
