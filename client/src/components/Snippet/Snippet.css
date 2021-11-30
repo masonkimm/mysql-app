@@ -10,8 +10,8 @@
   height: 300px;
   border-radius: 10px;
   /* box-shadow: 2px 2px #c1b5a6; */
-  box-shadow: 2px 2px #443b3b;
-
+  /* box-shadow: 2px 2px #cac7c7; */
+  box-shadow: 3px 3px 3px #cac7c7;
   background: transparent;
   /* background: #c0e7ec;
   background: #babadc; */
@@ -21,7 +21,7 @@
   font-size: 50px;
   text-align: center;
   padding: 10px 0;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid rgb(87, 85, 85);
   /* object-fit: contain; */
 }
 .card-body {

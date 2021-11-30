@@ -7,10 +7,7 @@ import './Snippets.css';
 
 const Snippets = () => {
   const [snippets, setSnippets] = useState([]);
-  const [snippetsByLang, setSnippetsByLang] = useState([]);
   const { search } = useLocation();
-
-  console.log('search', search);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,18 +21,7 @@ const Snippets = () => {
     };
     fetchData();
   }, [search]);
-  console.log(snippets);
 
-  // useEffect(() => {
-  //   const fetchSnippets = async () => {
-  //     const res = await axios.get(`/snippets${search}`);
-  //     console.log(res.data);
-  //     setSnippetsByLang(res.data);
-  //   };
-  //   fetchSnippets();
-  // }, [search]);
-
-  console.log(snippetsByLang);
   return (
     <div className='snippets'>
       {snippets &&

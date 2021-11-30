@@ -19,13 +19,8 @@ const CreateSnippet = () => {
     };
     try {
       const res = await axios.post('/snippet/create', newSnippetData);
-      // console.log(res.data.insertId);
       const id = res.data.insertId;
-      // window.location.replace('/snippet/' + id);
       window.location.replace(`/snippet/${id}`);
-      // window.location.replace(`/snippet/${id}/#app__container`);
-
-      // window.location.hash = '#app__container';
     } catch (err) {
       console.log(err);
     }
@@ -96,12 +91,10 @@ const CreateSnippet = () => {
               className='form-control'
               onChange={(e) => setSnippet(e.target.value)}></textarea>
           </div>
-          <button
-            type='submit'
-            className='btn btn-primary createSnippet__submitBtn'>
-            submit
+          <button type='submit' className='btn createSnippet__submitBtn'>
+            Submit
           </button>
-          <button className='btn btn-danger createSnippet__submitBtn'>
+          <button className='btn  createSnippet__submitBtn'>
             <Link to={'/'} className='link'>
               Cancel
             </Link>

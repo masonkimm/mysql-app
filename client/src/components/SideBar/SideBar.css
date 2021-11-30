@@ -1,7 +1,8 @@
 .sideBar {
+  display: flex;
+  flex-direction: column;
   flex: 2;
-  /* border: 1px solid rgb(218, 216, 216); */
-  overflow-y: scroll;
+  overflow-y: hidden;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -34,25 +35,53 @@
   /* border-bottom: 1px solid #c1b5a6; */
   padding-bottom: 2rem;
 }
+.sideBar__bottom {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .sideBar__items {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 30px;
   border-bottom: 1px solid #c1b5a6;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide scroll bar for chrome, safari, and opera */
+.sideBar__items::-webkit-scrollbar {
+  display: none;
 }
 
 .sideBar__bottom,
 .sideBar__top {
   border-top: 1px solid #c1b5a6;
 }
+
+.sideBar__item {
+  display: flex;
+  align-items: center;
+  width: 140px;
+}
 .sideBar button {
+  justify-content: space-between;
   font-size: 20px;
   display: flex;
   cursor: pointer;
   color: #c1b5a6;
-  /* border-bottom: 1px solid #c1b5a6; */
   padding: 10px 20px;
+  outline: none;
+}
+.sideBar button:focus,
+.sideBar button:active {
+  color: white;
+  outline: none !important;
+  box-shadow: none !important;
 }
 .sideBar button:hover {
   color: white;

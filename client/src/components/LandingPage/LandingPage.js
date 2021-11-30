@@ -3,8 +3,6 @@ import './LandingPage.css';
 import video3 from './spinning-vinyl.mp4';
 import logo from '../../logo.svg';
 
-import { Link } from 'react-scroll';
-
 const LandingPage = () => {
   return (
     <div className='landingPage'>
@@ -14,11 +12,7 @@ const LandingPage = () => {
       <div className='overlay'></div>
       <div className='landingPage__title text'>
         <h2 className='title__big'>Snippet App</h2>
-        <h3 className='title__small'>
-          MySQL <img src={logo} className='logo' alt='logo' />
-          Express <img src={logo} className='logo' alt='logo' /> React
-          <img src={logo} className='logo' alt='logo' /> Node
-        </h3>
+        <h4 className='title__small'>MySQL - Express - React - Node</h4>
         {/* <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
           maiores dignissimos consequuntur, quaerat placeat ab molestias

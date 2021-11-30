@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Link as Scroll } from 'react-scroll';
 import './NavBar.css';
 import logo from '../../logo.svg';
 
 const NavBar = () => {
   return (
-    <nav className='navbar navbar-expand-lg navbar-dark  sticky-top p-5 mr-5'>
-      {/* <Link to={'/'}>
-        <h2 className='navbar-brand'>Snippet App</h2>
-      </Link> */}
+    <nav
+      className='navbar navbar-expand-lg navbar-dark  sticky-top p-4 mr-5 ml-2 navBar'
+      id='navBar'>
       <img src={logo} className='nav__logo' alt='logo' />
+
       <button
         className='navbar-toggler'
         type='button'

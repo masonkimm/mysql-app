@@ -20,13 +20,14 @@ html::-webkit-scrollbar {
 .app__container {
   position: absolute;
   min-height: 60vh;
-  top: 45%;
+  /* max-height: 70vh; */
+  top: 40%;
   width: 100%;
   display: flex;
   padding: 2rem;
-  background: #0a0a5c;
-  background-image: url('https://images.unsplash.com/photo-1594747272740-9563f8170816?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
+  background: #000000;
   background-size: cover;
+  /* border: 1px solid white; */
 }
 
 .container__rightSide {
@@ -34,6 +35,9 @@ html::-webkit-scrollbar {
   height: auto;
   margin: 0 1rem;
   object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .link {
@@ -58,9 +62,9 @@ html::-webkit-scrollbar {
   position: fixed;
   bottom: 0;
   right: 0;
-  height: 7vmin;
-  pointer-events: none;
-  color: #c1b5a6 !important;
+  height: 60px;
+  pointer-events: visible;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {

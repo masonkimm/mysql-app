@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router';
-// import { Link } from 'react-router-dom';
 import './ShowSnippet.css';
 import Highlight from 'react-highlight';
 // import '../../../node_modules/highlight.js/styles/stackoverflow-light.css';
@@ -162,7 +161,7 @@ const ShowSnippet = () => {
                     <label htmlFor=''>Snippet</label>
                     <textarea
                       cols='20'
-                      rows='11'
+                      rows='15'
                       className='form-control'
                       defaultValue={snippet.snippet}
                       onChange={(e) => {
@@ -180,11 +179,11 @@ const ShowSnippet = () => {
             {updateMode && (
               <div className='showSnippet__updateButtons'>
                 <button
-                  className='btn btn-secondary cancel__btn'
+                  className='btn cancel__btn'
                   onClick={() => setUpdateMode(false)}>
                   Cancel{' '}
                 </button>
-                <button className='btn btn-primary' onClick={handleUpdate}>
+                <button className='btn ' onClick={handleUpdate}>
                   Submit{' '}
                 </button>
               </div>

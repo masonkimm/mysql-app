@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './SideBar.css';
 import axios from 'axios';
-import Snippet from '../Snippet/Snippet';
 import { Link } from 'react-router-dom';
 
 const SideBar = () => {
@@ -11,7 +10,6 @@ const SideBar = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get('/main');
-        // console.log(res.data);
         await setSnippets(res.data);
       } catch (err) {
         console.log(err);
@@ -49,7 +47,10 @@ const SideBar = () => {
                 to={`/?language=${language}`}
                 key={language}
                 className='link'>
-                <button className='btn'>{language}</button>
+                <div className='sideBar__item'>
+                  <i className={`devicon-${language}-plain  colored`} />
+                  <button className='btn'>{language}</button>
+                </div>
               </Link>
             ))}
         </div>

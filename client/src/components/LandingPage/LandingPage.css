@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   width: 100%;
-  min-height: 45vh;
+  min-height: 40vh;
   padding: 100px;
   display: flex;
   justify-content: space-between;
@@ -45,7 +45,7 @@ header {
   line-height: 2em;
   text-transform: uppercase;
 }
-.text h3 {
+.text h4 {
   /* font-size: 5em; */
   font-weight: 700;
   text-transform: uppercase;
@@ -70,28 +70,6 @@ header {
   /* background: #050a1f; */
   background: #6a5e48;
   mix-blend-mode: overlay;
-}
-
-.logo {
-  height: 2.5vmin;
-  margin-top: -6px;
-  pointer-events: none;
-  color: #c1b5a6 !important;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /* .landingPage {

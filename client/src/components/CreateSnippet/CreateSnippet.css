@@ -1,11 +1,15 @@
 .createSnippet {
   display: flex;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
   height: 100%;
-  /* border: 1px solid red; */
+  /* padding: 0 4rem; */
+  /* border: greenyellow 1px solid; */
 }
 .container__title {
   margin-bottom: 2rem;
+  color: #c1b5a6;
 }
 .createSnippet__container {
   margin-top: 2rem;
@@ -14,8 +18,18 @@
 .form-group label {
   margin-top: 0.8rem;
   font-size: 20px;
-  color: gray;
+  color: #c1b5a6;
   font-weight: 600;
+  font-style: italic;
+}
+
+.createSnippet button {
+  margin-top: 20px;
+  color: #c1b5a6;
+  border: 1px solid #c1b5a6;
+}
+.createSnippet button:hover {
+  color: white;
 }
 
 .createSnippet__submitBtn {

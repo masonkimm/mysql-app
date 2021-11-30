@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from './logo.svg';
 import SideBar from './components/SideBar/SideBar';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -9,8 +9,8 @@ import Snippets from './components/Snippets/Snippets';
 import LandingPage from './components/LandingPage/LandingPage';
 import UpdateSnippet from './components/UpdateSnippet/UpdateSnippet';
 import NavBar from './components/NavBar/NavBar';
-
-import video3 from './components/LandingPage/spinning-vinyl.mp4';
+import { Link } from 'react-scroll';
+import AboutPage from './pages/About/AboutPage';
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Snippets />} />
               <Route path='/' element={<LandingPage />} />
-              {/* <Route path='/' element={<LandingPage />} /> */}
+              <Route path='/about' element={<AboutPage />} />
               <Route path='/snippet/:id' element={<ShowSnippet />} />
               <Route path='/snippet/create' element={<CreateSnippet />} />
               <Route path='/snippet/update' element={<UpdateSnippet />} />
@@ -34,7 +34,9 @@ function App() {
           </div>
         </div>
 
-        {/* <img src={logo} className='app-logo' alt='logo' /> */}
+        <Link to='landingPage' smooth={true} spy={true}>
+          <img src={logo} className='app-logo' alt='logo' />
+        </Link>
       </div>
     </Router>
   );
