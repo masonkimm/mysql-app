@@ -14,7 +14,7 @@
   /* border: 1px solid red; */
 }
 
-header {
+/* header {
   position: absolute;
   top: 0;
   left: 0;
@@ -24,7 +24,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
 .landingPage video {
   position: absolute;
@@ -39,13 +39,13 @@ header {
   position: relative;
   z-index: 10;
 }
-.text h2 {
+.landingPage__titleBig {
   font-size: 5em;
   font-weight: 700;
   line-height: 2em;
   text-transform: uppercase;
 }
-.text h4 {
+.landingPage__titleSmall {
   /* font-size: 5em; */
   font-weight: 700;
   text-transform: uppercase;
@@ -60,7 +60,7 @@ header {
   max-width: 700px;
   color: #7c7d7e;
 }
-.overlay {
+.landingPage__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -70,6 +70,19 @@ header {
   /* background: #050a1f; */
   background: #6a5e48;
   mix-blend-mode: overlay;
+}
+
+/* mobile responsive */
+@media (max-width: 675px) {
+  .landingPage {
+    max-height: 20vh;
+  }
+  .landingPage__titleBig {
+    font-size: 3em;
+  }
+  .landingPage__titleSmall {
+    font-size: 1em;
+  }
 }
 
 /* .landingPage {

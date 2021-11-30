@@ -62,7 +62,7 @@ html::-webkit-scrollbar {
   position: fixed;
   bottom: 0;
   right: 0;
-  height: 60px;
+  height: 6vmin;
   pointer-events: visible;
   cursor: pointer;
 }

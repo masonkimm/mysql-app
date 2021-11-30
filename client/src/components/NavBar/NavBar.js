@@ -18,11 +18,13 @@ const NavBar = () => {
         aria-controls='navbarSupportedContent'
         aria-expanded='false'
         aria-label='Toggle navigation'>
-        <span className='navbar-toggler-icon '></span>
+        <span className='navbar-toggler-icon'></span>
       </button>
 
       <div className='collapse navbar-collapse' id='navbarSupportedContent'>
-        <ul className='navbar-nav ml-auto'>
+        <ul
+          className='navbar-nav ml-auto pull-right dropdown-menu-right'
+          style={{ right: '0', left: 'auto' }}>
           <li className='nav-item active'>
             <Link to={'/'} className='link'>
               <span className='nav-link'>

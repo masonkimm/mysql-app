@@ -1,7 +1,6 @@
 import React from 'react';
 import './LandingPage.css';
 import video3 from './spinning-vinyl.mp4';
-import logo from '../../logo.svg';
 
 const LandingPage = () => {
   return (
@@ -9,10 +8,12 @@ const LandingPage = () => {
       <video autoPlay loop muted>
         <source src={video3} type='video/mp4' />
       </video>
-      <div className='overlay'></div>
+      <div className='landingPage__overlay'></div>
       <div className='landingPage__title text'>
-        <h2 className='title__big'>Snippet App</h2>
-        <h4 className='title__small'>MySQL - Express - React - Node</h4>
+        <h2 className='landingPage__titleBig'>Snippet App</h2>
+        <h4 className='landingPage__titleSmall'>
+          MySQL - Express - React - Node
+        </h4>
         {/* <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
           maiores dignissimos consequuntur, quaerat placeat ab molestias

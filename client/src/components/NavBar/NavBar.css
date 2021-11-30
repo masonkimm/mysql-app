@@ -19,6 +19,12 @@
 .navbar-toggler {
   border: 1px solid white !important;
 }
+.navbar-nav {
+  display: flex;
+  justify-content: right;
+  float: right !important;
+  right: 0 !important;
+}
 
 .nav__logo {
   /* margin-left: -18px; */
@@ -40,5 +46,11 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 675px) {
+  .navbar-dark .navbar-nav .nav-link {
+    color: white;
   }
 }
