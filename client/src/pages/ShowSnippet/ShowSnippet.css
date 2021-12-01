@@ -194,6 +194,7 @@
     padding: 0;
   }
   .showSnippet__bottomRow__leftSide__show {
+    display: flex;
     border: none;
     width: 100%;
     text-align: center;
