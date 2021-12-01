@@ -56,9 +56,11 @@ app.post('/snippet/create', (req, res) => {
       ],
     },
     (err, data) => {
-      if (err) throw err;
-      // console.log(err);
-      res.json(data);
+      if (err) {
+        throw err;
+      } else {
+        res.redirect('/');
+      }
       // res.json(data)
       // res.render('index', { snippets: data });
     }
