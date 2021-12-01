@@ -53,6 +53,9 @@ const ShowSnippet = () => {
         snippet: updatedSnippet || snippetBody,
       });
       window.location.replace('/');
+      window.location.href =
+        'https://sjk-snippets.herokuapp.com/snippet/' + path;
+
       // window.location.replace(`/snippet/${path}`);
     } catch (err) {
       console.log(err);
