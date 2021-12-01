@@ -95,3 +95,13 @@
     padding-left: 70px;
   }
 }
+
+@media (max-width: 375px) {
+  .sideBar__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+}

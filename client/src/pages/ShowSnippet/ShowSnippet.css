@@ -243,3 +243,26 @@
     width: 95%;
   }
 }
+@media (max-width: 375px) {
+  .showSnippet {
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+    padding-bottom: 2rem;
+  }
+  .showSnippet__item {
+    padding: 0;
+    margin: 0;
+  }
+  .showSnippet__bottomRow__rightSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .showSnippet__bottomRow__snippet {
+    width: 90%;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+  }
+}

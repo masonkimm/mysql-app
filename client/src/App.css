@@ -87,3 +87,14 @@ html::-webkit-scrollbar {
     padding-bottom: 10rem;
   }
 }
+
+@media (max-width: 375px) {
+  .app__container {
+    margin: 0;
+    padding: 0;
+  }
+  .app__containerRightSide {
+    margin: 0;
+    padding: 0;
+  }
+}

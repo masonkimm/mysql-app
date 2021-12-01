@@ -1,7 +1,6 @@
 const express = require('express');
 const mysql = require('mysql');
 const path = require('path');
-
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -9,39 +8,11 @@ app.use(express.json());
 const PORT = process.env.PORT || 4000;
 
 // const config = require('./config/connnectDB');
-
-const config = require('./config/db');
-
-// const dbConfig =
-//   process.env.NODE_ENV === 'production' ? config.heroku : config.local;
-// const dbConfig = config.local;
-
-// const dbConfig =
-//   process.env.NODE_ENV === 'production' ? config.heroku : config.local;
-
-//  const jawsDB =
-//   const db = mysql.createConnection(process.env.JAWSDB_URL);
+// const config = require('./config/db');
 
 // const dbConfig =
 //   process.env.NODE_ENV === 'production' ? config.heroku : config.local;
 const db = mysql.createConnection(process.env.JAWSDB_URL);
-
-console.log(db);
-// if (db) {
-//   console.log('connected as to db');
-// }
-
-// app.get('/', (req, res) => {
-//   let sql = 'CREATE DATABASE IF NOT EXISTS snippet_app';
-//   db.query(sql, (err, result) => {
-//     if (err) {
-//       throw err;
-//     } else {
-//       res.send(data);
-//     }
-//     // console.log(result);
-//   });
-// });
 
 // route to create new snippet
 app.post('/snippet/create', (req, res) => {
@@ -56,11 +27,11 @@ app.post('/snippet/create', (req, res) => {
       ],
     },
     (err, data) => {
-      if (err) throw err;
-      // console.log(err);
-      res.send(data);
-      // res.json(data)
-      // res.render('index', { snippets: data });
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(data);
+      }
     }
   );
 });
@@ -96,10 +67,9 @@ app.get('/snippet/:id', (req, res) => {
   const query = `SELECT * FROM snippets WHERE id=${req.params.id}`;
   db.query(query, (err, data) => {
     if (err) {
-      // console.log(err);
+      console.log(err);
     } else {
       res.send(data);
-      // res.json(data);
     }
   });
 });
@@ -122,7 +92,6 @@ app.put('/snippet/update', (req, res) => {
         console.log(err);
       } else {
         res.send(data);
-        // res.json(data);
       }
     }
   );
@@ -136,7 +105,6 @@ app.delete('/delete/:id', (req, res) => {
       console.log(err);
     } else {
       res.send(data);
-      // res.send('deleted');
     }
   });
 });

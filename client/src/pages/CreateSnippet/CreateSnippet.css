@@ -4,8 +4,6 @@
   align-items: center;
   width: 70%;
   height: 100%;
-  /* padding: 0 4rem; */
-  /* border: greenyellow 1px solid; */
 }
 .container__title {
   margin-bottom: 2rem;
@@ -38,4 +36,10 @@
 .createSnippet__submitBtn {
   float: right;
   margin-left: 10px;
+}
+
+@media (max-width: 375px) {
+  .createSnippet {
+    padding-bottom: 3rem;
+  }
 }

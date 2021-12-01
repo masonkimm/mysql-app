@@ -1,3 +1,5 @@
 node_modules
 
 creds*.json
+./config/config.json
+./config/db.js

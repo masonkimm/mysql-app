@@ -61,3 +61,12 @@
     font-size: 1em;
   }
 }
+
+@media (max-width: 375px) {
+  .landingPage__title {
+    margin-top: 50px;
+  }
+  .landingPage__titleBig {
+    font-size: 1.7em;
+  }
+}
