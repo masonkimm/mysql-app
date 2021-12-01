@@ -9,7 +9,8 @@ const CreateSnippet = () => {
   const [description, setDescription] = useState('');
   const [snippet, setSnippet] = useState('');
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     const newSnippetData = {
       title,
       language,
@@ -19,7 +20,8 @@ const CreateSnippet = () => {
     try {
       const res = await axios.post('/snippet/create', newSnippetData);
       const id = res.data.insertId;
-      window.location.replace(`/snippet/${id}`);
+      window.location.replace('/');
+      // window.location.replace(`/snippet/${id}`);
     } catch (err) {
       console.log(err);
     }
@@ -29,13 +31,7 @@ const CreateSnippet = () => {
     <div className="createSnippet" id="createNew">
       <div className="container createSnippet__container">
         <h1 className="container__title">Create New Snippet</h1>
-        <form
-          action=""
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleSubmit();
-          }}
-        >
+        <form action="" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="">Title</label>
             <input

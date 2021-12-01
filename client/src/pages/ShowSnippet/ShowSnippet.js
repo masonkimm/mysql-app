@@ -52,7 +52,8 @@ const ShowSnippet = () => {
         description: updatedDescription || description,
         snippet: updatedSnippet || snippetBody,
       });
-      window.location.replace(`/snippet/${path}`);
+      window.location.replace('/');
+      // window.location.replace(`/snippet/${path}`);
     } catch (err) {
       console.log(err);
     }
