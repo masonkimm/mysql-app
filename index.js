@@ -19,17 +19,17 @@ const config = require('./config/db');
 // const dbConfig =
 //   process.env.NODE_ENV === 'production' ? config.heroku : config.local;
 
-if (process.env.JAWSDB_URL) {
-  const db = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-  const dbConfig =
-    process.env.NODE_ENV === 'production' ? config.heroku : config.local;
-  const db = mysql.createConnection(dbConfig);
-}
+//  const jawsDB =
+//   const db = mysql.createConnection(process.env.JAWSDB_URL);
 
-if (db) {
-  console.log('connected as to db');
-}
+// const dbConfig =
+//   process.env.NODE_ENV === 'production' ? config.heroku : config.local;
+const db = mysql.createConnection(process.env.JAWSDB_URL);
+
+console.log(db);
+// if (db) {
+//   console.log('connected as to db');
+// }
 
 // app.get('/', (req, res) => {
 //   let sql = 'CREATE DATABASE IF NOT EXISTS snippet_app';
