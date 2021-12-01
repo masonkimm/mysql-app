@@ -10,7 +10,7 @@ const Snippet = ({ snippet }) => {
           className={`devicon-${snippet.language}-plain  colored card-img-top`}
         />
         <div className="card-body">
-          <Link to={`/snippet/${snippet.id}`} className="link">
+          <Link to={`/snippets/${snippet.id}`} className="link">
             <h2 className="card-title snippet__title">{snippet.title}</h2>
           </Link>
           <p className="card-text snippet__description">
