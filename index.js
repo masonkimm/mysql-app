@@ -15,10 +15,17 @@ const config = require('./config/db');
 // const dbConfig =
 //   process.env.NODE_ENV === 'production' ? config.heroku : config.local;
 // const dbConfig = config.local;
-const dbConfig =
-  process.env.NODE_ENV === 'production' ? config.heroku : config.local;
 
-const db = mysql.createConnection(dbConfig);
+// const dbConfig =
+//   process.env.NODE_ENV === 'production' ? config.heroku : config.local;
+
+if (process.env.JAWSDB_URL) {
+  const db = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  const dbConfig =
+    process.env.NODE_ENV === 'production' ? config.heroku : config.local;
+  const db = mysql.createConnection(dbConfig);
+}
 
 if (db) {
   console.log('connected as to db');
