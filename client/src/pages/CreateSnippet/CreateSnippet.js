@@ -21,8 +21,8 @@ const CreateSnippet = () => {
       const res = await axios.post('/snippet/create', newSnippetData);
       const id = res.data.insertId;
       // window.location.href = `/snippet/${id}`;
-      window.location.href = 'https://sjk-snippets.herokuapp.com/snippet/' + id;
-      // window.location.replace('/');
+      // window.location.href = 'https://sjk-snippets.herokuapp.com/snippet/' + id;
+      window.location.replace('/');
       // window.location.replace(`/snippet/${id}`);
     } catch (err) {
       console.log(err);
