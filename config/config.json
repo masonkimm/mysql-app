@@ -1,0 +1,6 @@
+{
+  "production": {
+    "use_env_variables": "JAWSDB_URL",
+    "dialect": "mysql"
+  }
+}
