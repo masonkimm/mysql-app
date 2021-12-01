@@ -147,7 +147,8 @@ const ShowSnippet = () => {
               ) : (
                 <div className="showSnippet__bottomRow__leftSide__show">
                   <div className="showSnippet__bottomRow__leftSide__info">
-                    <span>language:</span> <p>{snippet.language}</p>
+                    <span>language:</span>{' '}
+                    <p id="snippet__language">{snippet.language}</p>
                   </div>
                   <div className="showSnippet__bottomRow__leftSide__info">
                     <span>description:</span>
@@ -155,7 +156,10 @@ const ShowSnippet = () => {
                   </div>
                   <div className="showSnippet__bottomRow__leftSide__info">
                     <span>created At:</span>
-                    <p> {new Date(snippet.created_at).toDateString()}</p>
+                    <p id="snippet__date">
+                      {' '}
+                      {new Date(snippet.created_at).toDateString()}
+                    </p>
                   </div>
                 </div>
               )}

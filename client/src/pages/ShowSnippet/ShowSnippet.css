@@ -103,8 +103,14 @@
   font-size: 17px;
   margin-bottom: 15px;
 }
-.showSnippet__bottomRow__leftSide__show p {
+.showSnippet__bottomRow__leftSide__show #snippet__language {
   font-size: 28px;
+}
+.showSnippet__bottomRow__leftSide__show #snippet__description {
+  font-size: 24px;
+}
+.showSnippet__bottomRow__leftSide__show #snippet__date {
+  font-size: 20px;
 }
 /* Bottom Row: Right */
 .showSnippet__bottomRow__rightSide {

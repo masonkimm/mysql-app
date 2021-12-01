@@ -25,6 +25,8 @@
 }
 .card-body .snippet__title {
   text-align: center;
+  font-style: italic;
+  padding-bottom: 20px;
 }
 
 .snippet__description {
