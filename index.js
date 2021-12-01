@@ -7,7 +7,7 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 4000;
 
-const config = require('./config/connnectDB');
+// const config = require('./config/connnectDB');
 // const config = require('./config/db');
 
 // const dbConfig =
