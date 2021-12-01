@@ -18,12 +18,12 @@ const CreateSnippet = () => {
       snippet,
     };
     try {
-      const res = await axios.post('/snippet/create', newSnippetData);
-      const id = res.data.insertId;
-      // window.location.href = `/snippet/${id}`;
-      // window.location.href = 'https://sjk-snippets.herokuapp.com/snippet/' + id;
-      window.location.replace('/');
+      // const res = await axios.post('/snippet/create', newSnippetData);
+
+      await axios.post('/snippet/create', newSnippetData);
+      // const id = res.data.insertId;
       // window.location.replace(`/snippet/${id}`);
+      window.location.replace('/');
     } catch (err) {
       console.log(err);
     }
@@ -66,13 +66,6 @@ const CreateSnippet = () => {
               <option value="php">PHP</option>
               <option value="ruby">Ruby</option>
             </select>
-
-            {/* <input
-              type='text'
-              className='form-control'
-              placeholder='language'
-              onChange={(e) => setLanguage(e.target.value)}
-            /> */}
           </div>
           <div className="form-group">
             <label htmlFor="">Description</label>

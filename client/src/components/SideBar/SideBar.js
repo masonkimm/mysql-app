@@ -19,11 +19,10 @@ const SideBar = () => {
   }, []);
 
   const languages = snippets.map((snippet) => snippet.language);
-  console.log(languages);
+
   const filteredLang = languages.filter(
     (item, index) => languages.indexOf(item) === index
   );
-  console.log(filteredLang);
 
   return (
     <div className="sideBar">

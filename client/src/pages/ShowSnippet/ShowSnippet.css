@@ -76,7 +76,7 @@
   height: 100%;
   flex-direction: column;
   border-right: 1px solid #c1b5a6;
-  flex: 3;
+  flex: 4;
   justify-content: space-evenly;
   color: #c1b5a6;
 }
@@ -92,7 +92,7 @@
   height: 100%;
   flex-direction: column;
   border-right: 1px solid #c1b5a6;
-  flex: 3;
+  flex: 4;
   justify-content: space-evenly;
   color: #c1b5a6;
 }

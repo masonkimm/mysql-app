@@ -50,6 +50,7 @@
 }
 
 /* media query */
+
 @media (max-width: 675px) {
   .landingPage {
     max-height: 20vh;
