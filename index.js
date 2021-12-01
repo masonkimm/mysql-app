@@ -99,6 +99,7 @@ app.get('/snippet/:id', (req, res) => {
       // console.log(err);
     } else {
       // res.send(data);
+      res.json(data);
     }
   });
 });
