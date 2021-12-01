@@ -11,9 +11,7 @@ const Snippets = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(
-          `https://sjk-snippets.herokuapp.com/main${search}`
-        );
+        const res = await axios.get(`/main${search}`);
         await setSnippets(res.data);
       } catch (err) {
         console.log(err);

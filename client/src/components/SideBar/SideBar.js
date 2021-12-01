@@ -9,7 +9,7 @@ const SideBar = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('https://sjk-snippets.herokuapp.com/main');
+        const res = await axios.get('/main');
         await setSnippets(res.data);
       } catch (err) {
         console.log(err);

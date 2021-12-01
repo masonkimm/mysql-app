@@ -24,23 +24,23 @@ if (db) {
   console.log('connected as to db');
 }
 
-app.get('/', (req, res) => {
-  let sql = 'CREATE DATABASE IF NOT EXISTS snippet_app';
-  db.query(sql, (err, result) => {
-    if (err) {
-      throw err;
-    } else {
-      res.send(data);
-    }
-    // console.log(result);
-  });
-});
+// app.get('/', (req, res) => {
+//   let sql = 'CREATE DATABASE IF NOT EXISTS snippet_app';
+//   db.query(sql, (err, result) => {
+//     if (err) {
+//       throw err;
+//     } else {
+//       res.send(data);
+//     }
+//     // console.log(result);
+//   });
+// });
 
 // route to create new snippet
 app.post('/snippet/create', (req, res) => {
   db.query(
     {
-      sql: 'INSERT INTO snippets (title, language, description, snippet) values (?, ?, ?, ?)',
+      sql: 'INSERT INTO liqe5m2u2s8wa20g.snippets (title, language, description, snippet) values (?, ?, ?, ?)',
       values: [
         req.body.title,
         req.body.language,
@@ -63,7 +63,7 @@ app.get('/main', (req, res) => {
   // to get snippets by language
   const language = req.query.language;
   if (language) {
-    const query = `SELECT * FROM snippets WHERE language = "${language}"`;
+    const query = `SELECT * FROM liqe5m2u2s8wa20g.snippets WHERE language = "${language}"`;
     db.query(query, (err, data) => {
       if (err) {
         console.log(err);
@@ -73,7 +73,7 @@ app.get('/main', (req, res) => {
     });
   } else {
     // to get all snippets
-    const query = 'SELECT * FROM snippets';
+    const query = 'SELECT * FROM liqe5m2u2s8wa20g.snippets';
     db.query(query, (err, data) => {
       if (err) {
         console.log(err);
@@ -99,7 +99,7 @@ app.get('/snippet/:id', (req, res) => {
 // route to update a snippet
 app.put('/snippet/update', (req, res) => {
   const query =
-    'UPDATE snippets SET title = ?, language =?, description=?, snippet =? WHERE ?';
+    'UPDATE liqe5m2u2s8wa20g.snippets SET title = ?, language =?, description=?, snippet =? WHERE ?';
   db.query(
     query,
     [
@@ -122,7 +122,7 @@ app.put('/snippet/update', (req, res) => {
 
 // route to delete a snipet
 app.delete('/delete/:id', (req, res) => {
-  const query = `DELETE FROM snippets WHERE id=${req.params.id}`;
+  const query = `DELETE FROM liqe5m2u2s8wa20g.snippets WHERE id=${req.params.id}`;
   db.query(query, (err, data) => {
     if (err) {
       console.log(err);

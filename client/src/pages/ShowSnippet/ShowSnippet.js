@@ -28,9 +28,7 @@ const ShowSnippet = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(
-          `https://sjk-snippets.herokuapp.com/snippet/${path}`
-        );
+        const res = await axios.get(`/snippet/${path}`);
         await setSnippet(res.data);
         setTitle(res.data[0].title);
         setLanguage(res.data[0].language);
@@ -47,16 +45,14 @@ const ShowSnippet = () => {
   // to update snippets
   const handleUpdate = async () => {
     try {
-      await axios.put(`https://sjk-snippets.herokuapp.com/snippet/update`, {
+      await axios.put(`/snippet/update`, {
         id: path,
         title: updatedTitle || title,
         language: updatedLanguage || language,
         description: updatedDescription || description,
         snippet: updatedSnippet || snippetBody,
       });
-      window.location.replace(
-        `https://sjk-snippets.herokuapp.com/snippet/${path}`
-      );
+      window.location.replace(`/snippet/${path}`);
     } catch (err) {
       console.log(err);
     }
@@ -64,7 +60,7 @@ const ShowSnippet = () => {
   // to delete snippets
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://sjk-snippets.herokuapp.com/delete/${path}`);
+      await axios.delete(`/delete/${path}`);
       window.location.replace('/');
     } catch (err) {}
   };
