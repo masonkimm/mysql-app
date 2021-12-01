@@ -98,7 +98,7 @@ app.get('/snippet/:id', (req, res) => {
     if (err) {
       // console.log(err);
     } else {
-      res.send(data);
+      // res.send(data);
     }
   });
 });
