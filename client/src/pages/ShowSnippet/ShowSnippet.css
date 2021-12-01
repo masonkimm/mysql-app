@@ -100,7 +100,7 @@
 .showSnippet__bottomRow__leftSide__show span {
   font-style: italic;
   color: #7c7d7e;
-  font-size: 17px;
+  font-size: 19px;
   margin-bottom: 15px;
 }
 .showSnippet__bottomRow__leftSide__show #snippet__language {
@@ -110,7 +110,7 @@
   font-size: 24px;
 }
 .showSnippet__bottomRow__leftSide__show #snippet__date {
-  font-size: 20px;
+  font-size: 24px;
 }
 /* Bottom Row: Right */
 .showSnippet__bottomRow__rightSide {
