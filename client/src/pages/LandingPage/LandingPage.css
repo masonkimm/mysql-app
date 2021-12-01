@@ -51,14 +51,15 @@
 
 /* media query */
 
-@media (max-width: 675px) {
+@media (min-width: 376px) and (max-width: 600px) {
   .landingPage {
     max-height: 20vh;
     text-align: center;
   }
   .landingPage__titleBig {
-    font-size: 2.7em;
+    font-size: 4em;
     line-height: 1.2;
+    text-align: center;
   }
   .landingPage__titleSmall {
     font-size: 1em;
@@ -74,8 +75,8 @@
     font-size: 1.6em;
     line-height: 1.2;
   }
-  .landingPage__titleBig {
-    font-size: 1.6em;
-    line-height: 0.9em;
+  .landingPage__titleSmall {
+    font-size: 1em;
+    line-height: 1.2em;
   }
 }

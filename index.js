@@ -7,14 +7,11 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 4000;
 
+// For local Development
 // const config = require('./config/connnectDB');
-// const config = require('./config/db');
-
-// const dbConfig =
-//   process.env.NODE_ENV === 'production' ? config.heroku : config.local;
-// const dbConfig = config.local;
 // const db = mysql.createConnection(config.local);
 
+// For Production
 const db = mysql.createConnection(process.env.JAWSDB_URL);
 
 // route to create new snippet
