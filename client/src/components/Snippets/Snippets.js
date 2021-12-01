@@ -23,9 +23,9 @@ const Snippets = () => {
   return (
     <div className="snippets">
       {snippets &&
-        snippets.map((snippet) => (
-          <Snippet snippet={snippet} key={snippet.id} />
-        ))}
+        snippets
+          .reverse()
+          .map((snippet) => <Snippet snippet={snippet} key={snippet.id} />)}
     </div>
   );
 };
