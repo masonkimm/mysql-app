@@ -151,7 +151,7 @@ const ShowSnippet = () => {
                   </div>
                   <div className="showSnippet__bottomRow__leftSide__info">
                     <span>description:</span>
-                    <p> {snippet.description}</p>
+                    <p id="snippet__description"> {snippet.description}</p>
                   </div>
                   <div className="showSnippet__bottomRow__leftSide__info">
                     <span>created At:</span>

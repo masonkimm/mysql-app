@@ -201,6 +201,16 @@
     margin: 0;
     padding: 0;
   }
+  #snippet__description {
+    font-size: 20px;
+    overflow-y: scroll;
+    height: 70%;
+    -ms-overflow-style: none; /* IE & Edge*/
+    scrollbar-width: none; /*Firefox*/
+  }
+  #snippet__description::-webkit-scrollbar {
+    display: none;
+  }
   .showSnippet__bottomRow__leftSide__show span {
     font-size: 20px;
   }
