@@ -24,17 +24,17 @@ if (db) {
   console.log('connected as to db');
 }
 
-app.get('/', (req, res) => {
-  let sql = 'CREATE DATABASE IF NOT EXISTS snippet_app';
-  db.query(sql, (err, result) => {
-    if (err) {
-      throw err;
-    } else {
-      res.send(data);
-    }
-    // console.log(result);
-  });
-});
+// app.get('/', (req, res) => {
+//   let sql = 'CREATE DATABASE IF NOT EXISTS snippet_app';
+//   db.query(sql, (err, result) => {
+//     if (err) {
+//       throw err;
+//     } else {
+//       res.send(data);
+//     }
+//     // console.log(result);
+//   });
+// });
 
 // route to create new snippet
 app.post('/snippet/create', (req, res) => {
