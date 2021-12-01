@@ -9,8 +9,7 @@ const CreateSnippet = () => {
   const [description, setDescription] = useState('');
   const [snippet, setSnippet] = useState('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     const newSnippetData = {
       title,
       language,
@@ -30,7 +29,13 @@ const CreateSnippet = () => {
     <div className="createSnippet" id="createNew">
       <div className="container createSnippet__container">
         <h1 className="container__title">Create New Snippet</h1>
-        <form action="" onSubmit={handleSubmit}>
+        <form
+          action=""
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSubmit();
+          }}
+        >
           <div className="form-group">
             <label htmlFor="">Title</label>
             <input
