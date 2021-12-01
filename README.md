@@ -37,6 +37,11 @@ config.env file not included for security purposes.
 
 - Github project page link: (https://github.com/masonkimm/snippet-app-mysql)
 
+## Deployment
+
+- npm run build for any client side updates
+- heroku/git upload process for server side
+
 ## Available Scripts
 
 In the project directory, you can run:
