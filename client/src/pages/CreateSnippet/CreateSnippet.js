@@ -18,12 +18,12 @@ const CreateSnippet = () => {
       snippet,
     };
     try {
-      // const res = await axios.post('/snippet/create', newSnippetData);
+      // await axios.post('/snippet/create', newSnippetData);
+      // window.location.replace('/');
+      const res = await axios.post('/snippet/create', newSnippetData);
 
-      await axios.post('/snippet/create', newSnippetData);
-      // const id = res.data.insertId;
-      // window.location.replace(`/snippet/${id}`);
-      window.location.replace('/');
+      const id = res.data.insertId;
+      window.location.replace(`/snippets/${id}`);
     } catch (err) {
       console.log(err);
     }

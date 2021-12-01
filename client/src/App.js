@@ -27,7 +27,7 @@ function App() {
               <Route path="/" element={<Snippets />} />
               <Route path="/" element={<LandingPage />} />
               <Route path="/about" element={<AboutPage />} />
-              <Route path="/snippet/:id" element={<ShowSnippet />} />
+              <Route path="/snippets/:id" element={<ShowSnippet />} />
               <Route path="/snippet/create" element={<CreateSnippet />} />
             </Routes>
           </div>
